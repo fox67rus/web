@@ -190,6 +190,36 @@
     </ul>
     <h4>Результат работы скрипта:</h4>
     <script>
+        array_4 = [1, 2, 5, 9, 4, 13, 4, 10];
+        for (i = 0; i < array.length; i++) {
+            if (array_4[i] == 4) {
+                document.write('Есть!');
+                break;
+            }
+        }
+        document.write('<br>');
+    </script>
+    <script>
+        const daysOfWeek = ['Понедельник ', 'Вторник ', 'Среда ', 'Четверг ', 'Пятница ', 'Суббота ', 'Воскресенье'];
+        // вариант 1
+        for(let i =0; i < daysOfWeek.length; i++){
+            if (i > 4) {
+                document.write(`<b>${daysOfWeek[i]}</b>`);
+            } else {
+                document.write(daysOfWeek[i]);
+            }
+        }
+        document.write('<br>');
+
+        // вариант 2
+        for(let i =0; i < daysOfWeek.length; i++){
+            if (daysOfWeek[i].startsWith('Су') || daysOfWeek[i].startsWith('Во')) {
+                document.write(`<b>${daysOfWeek[i]}</b>`);
+            } else {
+                document.write(daysOfWeek[i]);
+            }
+        }
+
 
     </script>
 
