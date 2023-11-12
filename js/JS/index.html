@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    console.log("Привет, мир!");
+    document.write("<h2>Привет, мир!</h2>");
+
+    // let message = "Hello!";
+    // console.log(message)
+    //
+    // let admin;
+    // let name;
+    //
+    // name = "Василий";
+
+    // let userName = 'Сергей';
+    // let ageUser = 35;
+    // let isCar = true;
+    // let adress = '';
+    //
+    // let person = {
+    //     userName: 'Сергей',
+    //     ageUser: 35,
+    //     isCar: true,
+    //     address: 'г. Тольятти'
+    // }
+    //
+    // let perem1 = 5;
+    // let perem2 = '4';
+    // console.log(perem1 + perem2);
+    // console.log(perem1 * perem2);
+    // console.log(perem1 * '!');
+
+    //// Задача 1
+    // let num = 3;
+    // console.log(num);
+
+    // // Задача 2
+    // let a = 10;
+    // let b = 2;
+    //
+    // console.log(a + b);
+    // console.log(a - b);
+    // console.log(a * b);
+    // console.log(a / b);
+
+    // let userName = 'Иван';
+    // let age = 18;
+    //
+    // console.log('Добро пожаловать, ' + userName);
+    // // document.write('Добро пожаловать, ' + userName);
+    //
+    // document.write(`Добро пожаловать,  ${userName}, вам ${age} лет`);
+
+
+    // // massive
+    // let fruit = ['apple', 'pear', 'plum']
+    // console.log(fruit)
+
+    // let a = 5;
+    // let b = 10;
+    //
+    // if (a > b)
+    // {
+    //     console.log('Число А больше числа Б');
+    // }
+    // else if (a < b)
+    // {
+    //     console.log('Число Б больше числа А');
+    // }
+    // else
+    // {
+    //     console.log('Число А равно числу Б');
+    // }
+
+    //   let pass = '';
+    //   let pass_repeat = '123';
+    //
+    //   if (pass == '')
+    //   {
+    //       document.write('Поле пароль не заполнено');
+    //       if (pass_repeat != '')
+    //       {
+    //           if (pass == pass_repeat)
+    //           {
+    //               document.write('Вы зарегистрировались')
+    //           }
+    //           else
+    //           {
+    //               document.write('Пароли не совпадают')
+    //           }
+    //
+    //       }
+    //       else
+    //       {
+    //           document.write('Заполните поле повтор пароля');
+    //       }
+    //   }
+    //
+    // let i = 0;
+    //   while (i < 3) {
+    //       document.write(i);
+    //   }
+
+
+    let sec = 0;
+    let min = 0;
+
+    setInterval(function () {
+        sec++;
+
+        if (sec > 60) {
+            sec = 1;
+            min++;
+        }
+
+        if (min < 10) {
+            if (sec < 10) {
+                document.body.innerHTML = "0" + min + ":0" + sec;
+            } else {
+                document.body.innerHTML = "0" + min + ":" + sec;
+            }
+        } else {
+            if (sec < 10) {
+                document.body.innerHTML = min + ":0" + sec;
+            } else {
+                document.body.innerHTML = min + ":" + sec;
+            }
+        }
+
+
+    }, 10);
+</script>
+
+</body>
+</html>
