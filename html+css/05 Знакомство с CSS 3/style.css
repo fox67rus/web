@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', serif;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+header{
+    padding: 20px;
+}
+
+.baner {
+    height: 300px;
+    background-size: 1200px;
+    background: url("rm417-e136-mockup.jpg") center;
+}
+
+
+h1:hover{
+    color: #fcc01f;
+}
+.btn{
+    width: 200px;
+    background: #FED84C;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #11263A;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: #fcc01f;
+}
+.btn:active {
+    background: #ffc800;
+}
+.faq:last-child {
+    color: green;
+}
+
+form{
+    padding: 20px 0;
+}
