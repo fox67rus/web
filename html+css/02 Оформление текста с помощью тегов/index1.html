@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Язык разметки</title>
+    </head>
+    <body>
+        <h1>Язык разметки</h1>
+       <p><b>Язык разметки</b> в компьютерной терминологии — набор символов или последовательностей, вставляемых
+            в текст для передачи информации о его выводе или строении. <span class="fat">Принадлежит классу компьютерных языков.</span></p>
+        <h2><span class="overline">Структура языка</span></h2>
+        <p>Текстовый документ, написанный с использованием языка разметки, содержит не только сам текст но и дополнительную информацию:</p>
+        <ul>
+            <li>указание на заголовки</li>
+            <li><mark>выделения</mark></li>
+            <li><span class="upper">списки</span></li>
+            <li>и т. д.</li>
+        </ul>
+        <p>В более сложных случаях язык разметки позволяет вставлять в документ
+            <span class="offset">интерактивные элементы</span> и содержание других документов.</p>
+    </body>
+
+	<style>
+        body {
+            width: 260px;
+            margin: 0;
+            padding: 0 10px;
+            font-family: "Times New Roman", serif;
+            font-size: 16px;
+            text-indent: 10%;
+        }
+        h1, h2{
+            color: darkred;
+        }
+        h1{
+            text-shadow: 1px 1px 2px #d9b52b;
+        }
+        p{
+            font-size: 18px;
+        }
+        .fat {
+            text-decoration: underline dotted darkred;
+        }
+        .overline {
+            text-decoration: underline overline rebeccapurple;
+        }
+        .upper {
+            text-transform: uppercase;
+        }
+        .offset {}
+	</style>
+</html>
