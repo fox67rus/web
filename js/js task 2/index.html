@@ -280,6 +280,43 @@
 </script>
 <hr>
 
+<h3>Задание для самостоятельного выполнения</h3>
+<ul>
+    <li>Повторите страницу по данному по образцу. Кнопка считает количество нажатий по ней
+    </li>
+    <li>По нажатию на кнопку в нижнем инпуте появится квадратчисла из верхнего инпута
+    </li>
+</ul>
+<h4>Результат работы скрипта:</h4>
+<button onclick="counter()" id="counter">Счетчик нажатий</button>
+<br>
+<br>
+<script>
+    function counter() {
+        var counter = document.getElementById('counter').innerHTML;
 
+        if (Number(counter)) {
+            document.getElementById('counter').innerHTML = Number(counter) + 1;
+        } else {
+            document.getElementById('counter').innerHTML = 1;
+        }
+    }
+</script>
+
+<input type="text" id="inputNumber" placeholder="Введите число!">
+<input type="text" id="resultSquare" disabled placeholder="Здесь появится результат">
+<button onclick="squareToInput()"> Нажми на меня!</button>
+<script>
+    function squareToInput() {
+        var inputNumber = document.getElementById('inputNumber').value;
+
+        if (Number(inputNumber)) {
+            var number =  Number(inputNumber);
+            document.getElementById('resultSquare').value = (number ** 2);
+        } else {
+            document.getElementById('resultSquare').value = '← введите число!!'
+        }
+    }
+</script>
 </body>
 </html>
