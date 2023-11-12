@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Относительное позиционирование</title>
+    </head>
+    <body>
+        <ul class="main-menu">
+            <li><a href="#company">О компании</a></li>
+            <li><a href="#services">Услуги</a>
+                <ul class="sub-menu">
+                    <li><a href="#1">Разработка</a></li>
+                    <li><a href="#2">Продвижение</a></li>
+                    <li><a href="#3">Контекст</a></li>
+                </ul>
+            </li>
+            <li><a href="#team">Сотрудники</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </body>
+<style>
+body {
+    padding: 10px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.main-menu {
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-menu a {
+    display: block;
+    margin-bottom: -1px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #0088cc;
+    border: 1px solid #e5e5e5;
+}
+
+.main-menu a:hover {
+    background: #f5f5f5;
+}
+
+.main-menu > li {
+}
+
+/* Подменю */
+
+.main-menu .sub-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fcf8e3;
+}
+</style>	
+</html>
