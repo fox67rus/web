@@ -5,243 +5,261 @@
     <title>Программирование на стороне клиента</title>
 </head>
 <body>
-    <h1>Программирование на стороне клиента</h1>
+<h1>Программирование на стороне клиента</h1>
 
-    <h2>Пример работы с условиями</h2>
+<h2>Пример работы с условиями</h2>
 
-    <h3>Задание № 7. Условия</h3>
-    <p>Если переменная a равна 10, то выведите 'Верно', иначе выведите 'Неверно'.</p>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        let num = 10;
-        if (num == 10) {
-            document.write('Верно');
+<h3>Задание № 7. Условия</h3>
+<p>Если переменная a равна 10, то выведите 'Верно', иначе выведите 'Неверно'.</p>
+<h4>Результат работы скрипта:</h4>
+<script>
+    let num = 10;
+    if (num == 10) {
+        document.write('Верно');
 
+    } else {
+        document.write('Неверно');
+    }
+</script>
+<hr>
+
+<h3>Задание № 8</h3>
+<p>В переменной min лежит число от 0 до 59. Определите в какую
+    четверть часа попадает это число (в первую, вторую, третью или четвертую).</p>
+<h4>Результат работы скрипта:</h4>
+<script>
+    let min = 10;
+    if (min >= 0 && min <= 14) {
+        document.write('В первую четверть');
+    }
+    if (min >= 15 && min <= 30) {
+        document.write('В первую четверть');
+    }
+    if (min >= 31 && min <= 45) {
+        document.write('В третью четверть');
+    }
+    if (min >= 46 && min <= 59) {
+        document.write('В четвертую четверть');
+    }
+
+</script>
+<hr>
+
+<h3>Задание № 9</h3>
+<p>Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет
+    значение 'ru', то в переменную arr запишем массив дней недели на русском
+    языке, а если имеет значение 'en' – то на английском. Решите задачу через 2
+    if, через switch-case и через многомерный массив без ифов и switch</p>
+<h4>Результат работы скрипта:</h4>
+<script>
+    let lang = 'ru';
+    if (lang == 'ru') {
+        var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    }
+    if (lang == 'en') {
+        arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+    }
+    document.write(arr);
+    document.write('<br>');
+
+    var lang2 = 'ru';
+    var arr2 = {
+        'ru': ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+        'en': ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+    };
+    document.write(arr2[lang2]);
+</script>
+<hr>
+
+<h3>Задание для самостоятельного выполнения</h3>
+<ul>
+    <li>В переменной month лежит какое-то число из интервала от 1 до 12.
+        Определите в какую пору года попадает этот месяц (зима, лето, весна,
+        осень). Значение в должен быть текущий месяц.
+    </li>
+    <li>Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что
+        первым символом этой строки является буква 'a'. Если это так -
+        выведите 'да', в противном случае выведите 'нет'
+    </li>
+    <li>**** Дана строка из 6-ти цифр. Проверьте, что сумма первых трех
+        цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в
+        противном случае выведите 'нет'.
+    </li>
+</ul>
+<h4>Результат работы скрипта:</h4>
+
+<script>
+    let month = 11;
+    let season = 'Не определен';
+    if (month == 1 || month == 2 || month == 12) {
+        season = 'Зима';
+    }
+    if (month == 3 || month == 4 || month == 5) {
+        season = 'Весна';
+    }
+    if (month == 6 || month == 7 || month == 8) {
+        season = 'Лето';
+    }
+    if (month == 9 || month == 10 || month == 11) {
+        season = 'Осень';
+    }
+    document.write('Сейчас ' + season);
+    document.write('<br>');
+</script>
+<script>
+    let str = 'abcde';
+    if (str[0] == 'a') {
+        document.write('да');
+    } else {
+        document.write('нет');
+    }
+    document.write('<br>');
+</script>
+
+<script>
+    let num_str = '123321';
+    let sum1 = (Number(num_str[0]) + Number(num_str[1]) + Number(num_str[2]));
+    let sum2 = (Number(num_str[3]) + Number(num_str[4]) + Number(num_str[5]));
+
+    if (sum1 == sum2) {
+        document.write('да');
+    } else {
+        document.write('нет');
+    }
+    document.write('<br>');
+</script>
+<hr>
+
+<h2>Пример работы с циклами</h2>
+
+<h3>Задание № 10.Работа с циклами в JS</h3>
+<p>Выведите столбец чисел от 1 до 50.</p>
+<h4>Результат работы скрипта:</h4>
+<script>
+    var i = 1;
+    while (i <= 25) {
+        document.write(i + '<br>');
+        i++;
+    }
+    for (i = 26; i <= 50; i++) {
+        document.write(i + '<br>');
+    }
+</script>
+<hr>
+
+<h3>Задание № 11</h3>
+<p>Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for выведите все
+    эти элементы на экран.</p>
+<h4>Результат работы скрипта:</h4>
+<script>
+    var array = [1, 2, 3, 4, 5];
+    for (i = 0; i < array.length; i++) {
+        document.write(array[i] + '<br>');
+    }
+</script>
+
+<hr>
+<h3>Задание № 12. Цикл for-in</h3>
+<p>Дан объект obj с ключами 'Минск', 'Москва', 'Киев' с элементами 'Беларусь',
+    'Россия', 'Украина'. С помощью цикла for-in выведите на экран строки такого
+    формата: 'Минск - это Беларусь.'.</p>
+<h4>Результат работы скрипта:</h4>
+<script>
+    var obj = {
+        'Минск': 'Беларусь',
+        'Москва': 'Россия',
+        'Киев': 'Украина'
+    }
+
+    for (var key in obj) {
+        document.write(`${key} - это ${obj[key]}.<br>`);
+    }
+</script>
+<hr>
+
+<h3>Задание для самостоятельного выполнения</h3>
+<ul>
+    <li>Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. С помощью цикла for и
+        оператора if проверьте есть ли в массиве элемент со значением, равным
+        4. Если есть - выведите на экран 'Есть!' и выйдите из цикла. Если нет -
+        ничего делать не надо.
+    </li>
+    <li>Составьте массив дней недели. С помощью цикла for выведите все дни
+        недели, а выходные дни выведите жирным.
+    </li>
+</ul>
+<h4>Результат работы скрипта:</h4>
+<script>
+    array_4 = [1, 2, 5, 9, 4, 13, 4, 10];
+    for (i = 0; i < array.length; i++) {
+        if (array_4[i] == 4) {
+            document.write('Есть!');
+            break;
+        }
+    }
+    document.write('<br>');
+</script>
+<script>
+    const daysOfWeek = ['Понедельник ', 'Вторник ', 'Среда ', 'Четверг ', 'Пятница ', 'Суббота ', 'Воскресенье'];
+    // вариант 1
+    for (let i = 0; i < daysOfWeek.length; i++) {
+        if (i > 4) {
+            document.write(`<b>${daysOfWeek[i]}</b>`);
         } else {
-            document.write('Неверно');
+            document.write(daysOfWeek[i]);
         }
-    </script>
-    <hr>
+    }
+    document.write('<br>');
 
-    <h3>Задание № 8</h3>
-    <p>В переменной min лежит число от 0 до 59. Определите в какую
-        четверть часа попадает это число (в первую, вторую, третью или четвертую).</p>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        let min = 10;
-        if (min >= 0 && min <= 14) {
-            document.write('В первую четверть');
-        }
-        if (min >= 15 && min <= 30) {
-            document.write('В первую четверть');
-        }
-        if (min >= 31 && min <= 45) {
-            document.write('В третью четверть');
-        }
-        if (min >= 46 && min <= 59) {
-            document.write('В четвертую четверть');
-        }
-
-    </script>
-    <hr>
-
-    <h3>Задание № 9</h3>
-    <p>Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет
-        значение 'ru', то в переменную arr запишем массив дней недели на русском
-        языке, а если имеет значение 'en' – то на английском. Решите задачу через 2
-        if, через switch-case и через многомерный массив без ифов и switch</p>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        let lang = 'ru';
-        if (lang == 'ru') {
-            var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-        }
-        if (lang == 'en') {
-            arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
-        }
-        document.write(arr);
-        document.write('<br>');
-
-        var lang2 = 'ru';
-        var arr2 = {
-            'ru': ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
-            'en': ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
-        };
-        document.write(arr2[lang2]);
-    </script>
-    <hr>
-
-    <h3>Задание для самостоятельного выполнения</h3>
-    <ul>
-        <li>В переменной month лежит какое-то число из интервала от 1 до 12.
-            Определите в какую пору года попадает этот месяц (зима, лето, весна,
-            осень). Значение в должен быть текущий месяц.
-        </li>
-        <li>Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что
-            первым символом этой строки является буква 'a'. Если это так -
-            выведите 'да', в противном случае выведите 'нет'
-        </li>
-        <li>**** Дана строка из 6-ти цифр. Проверьте, что сумма первых трех
-            цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в
-            противном случае выведите 'нет'.
-        </li>
-    </ul>
-    <h4>Результат работы скрипта:</h4>
-
-    <script>
-        let month = 11;
-        let season = 'Не определен';
-        if (month == 1 || month == 2 || month == 12) {
-            season = 'Зима';
-        }
-        if (month == 3 || month == 4 || month == 5) {
-            season = 'Весна';
-        }
-        if (month == 6 || month == 7 || month == 8) {
-            season = 'Лето';
-        }
-        if (month == 9 || month == 10 || month == 11) {
-            season = 'Осень';
-        }
-        document.write('Сейчас ' + season);
-        document.write('<br>');
-    </script>
-    <script>
-        let str = 'abcde';
-        if (str[0] == 'a') {
-            document.write('да');
+    // вариант 2
+    for (let i = 0; i < daysOfWeek.length; i++) {
+        if (daysOfWeek[i].startsWith('Су') || daysOfWeek[i].startsWith('Во')) {
+            document.write(`<b>${daysOfWeek[i]}</b>`);
         } else {
-            document.write('нет');
+            document.write(daysOfWeek[i]);
         }
-        document.write('<br>');
-    </script>
+    }
+</script>
 
-    <script>
-        let num_str = '123321';
-        let sum1 = (Number(num_str[0]) + Number(num_str[1]) + Number(num_str[2]));
-        let sum2 = (Number(num_str[3]) + Number(num_str[4]) + Number(num_str[5]));
+<h2>Работа с элементами DOM (объектная модель документа)</h2>
 
-        if (sum1 == sum2) {
-            document.write('да');
-        } else {
-            document.write('нет');
+<h3>Задание № 13. Работа с DOM</h3>
+<p>Сделайте так, чтобы при нажатии на кнопку выводился текст с помощью
+    команды alert «Привет»</p>
+<h4>Результат работы скрипта:</h4>
+<button onclick="alert('Привет!')"> Нажми меня</button>
+<hr>
+
+<h3>Задание № 14.</h3>
+<p>Сделайте так, чтобы при нажатии на кнопку она меняла текст в импуте:</p>
+<h4>Результат работы скрипта:</h4>
+<button onclick="buttonClick()"> Нажми меня</button>
+<input type="text" id="input" value="???">
+<script>
+    function buttonClick() {
+        var input = document.getElementById('input');
+        input.value = '!!!'
+    }
+</script>
+<hr>
+
+<h3>Задание № 15.</h3>
+<p>Повторите поведение кнопки по нажатию на нее (она выводит алертом
+    содержимое инпута, возведенное в квадрат):</p>
+<h4>Результат работы скрипта:</h4>
+<button onclick="squareInput()"> Нажми меня</button>
+<input type="text" id="inputValue" placeholder="Введите число">
+<p id="result"></p>
+<script>
+    function squareInput() {
+        var inputValue = document.getElementById('inputValue').value;
+        if (Number(inputValue)) {
+            var number =  Number(inputValue);
+            document.getElementById("result").innerHTML = (number ** 2);
         }
-        document.write('<br>');
-    </script>
-    <hr>
-
-    <h2>Пример работы с циклами</h2>
-
-    <h3>Задание № 10.Работа с циклами в JS</h3>
-    <p>Выведите столбец чисел от 1 до 50.</p>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        var i = 1;
-        while (i <= 25) {
-            document.write(i + '<br>');
-            i++;
-        }
-        for (i = 26; i <= 50; i++) {
-            document.write(i + '<br>');
-        }
-    </script>
-    <hr>
-
-    <h3>Задание № 11</h3>
-    <p>Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for выведите все
-        эти элементы на экран.</p>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        var array = [1, 2, 3, 4, 5];
-        for (i = 0; i < array.length; i++) {
-            document.write(array[i] + '<br>');
-        }
-    </script>
-
-    <hr>
-    <h3>Задание № 12. Цикл for-in</h3>
-    <p>Дан объект obj с ключами 'Минск', 'Москва', 'Киев' с элементами 'Беларусь',
-        'Россия', 'Украина'. С помощью цикла for-in выведите на экран строки такого
-        формата: 'Минск - это Беларусь.'.</p>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        var obj = {
-            'Минск': 'Беларусь',
-            'Москва': 'Россия',
-            'Киев': 'Украина'
-        }
-
-        for (var key in obj) {
-            document.write(`${key} - это ${obj[key]}.<br>`);
-        }
-    </script>
-    <hr>
-
-    <h3>Задание для самостоятельного выполнения</h3>
-    <ul>
-        <li>Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. С помощью цикла for и
-            оператора if проверьте есть ли в массиве элемент со значением, равным
-            4. Если есть - выведите на экран 'Есть!' и выйдите из цикла. Если нет -
-            ничего делать не надо.
-        </li>
-        <li>Составьте массив дней недели. С помощью цикла for выведите все дни
-            недели, а выходные дни выведите жирным.
-        </li>
-    </ul>
-    <h4>Результат работы скрипта:</h4>
-    <script>
-        array_4 = [1, 2, 5, 9, 4, 13, 4, 10];
-        for (i = 0; i < array.length; i++) {
-            if (array_4[i] == 4) {
-                document.write('Есть!');
-                break;
-            }
-        }
-        document.write('<br>');
-    </script>
-    <script>
-        const daysOfWeek = ['Понедельник ', 'Вторник ', 'Среда ', 'Четверг ', 'Пятница ', 'Суббота ', 'Воскресенье'];
-        // вариант 1
-        for(let i =0; i < daysOfWeek.length; i++){
-            if (i > 4) {
-                document.write(`<b>${daysOfWeek[i]}</b>`);
-            } else {
-                document.write(daysOfWeek[i]);
-            }
-        }
-        document.write('<br>');
-
-        // вариант 2
-        for(let i =0; i < daysOfWeek.length; i++){
-            if (daysOfWeek[i].startsWith('Су') || daysOfWeek[i].startsWith('Во')) {
-                document.write(`<b>${daysOfWeek[i]}</b>`);
-            } else {
-                document.write(daysOfWeek[i]);
-            }
-        }
-    </script>
-
-    <h2>Работа с элементами DOM (объектная модель документа)</h2>
-
-    <h3>Задание № 13. Работа с DOM</h3>
-    <p>Сделайте так, чтобы при нажатии на кнопку выводился текст с помощью
-        команды alert «Привет»</p>
-    <h4>Результат работы скрипта:</h4>
-    <button onclick="alert('Привет!')"> Нажми меня</button>
-    <hr>
-    <h3>Задание № 14.</h3>
-    <p>Сделайте так, чтобы при нажатии на кнопку она меняла текст в импуте:</p>
-    <h4>Результат работы скрипта:</h4>
-    <button onclick="buttonClick()"> Нажми меня</button>
-    <input type="text" id="input" value="???">
-    <script>
-        function buttonClick() {
-            var input = document.getElementById('input');
-            input.value = '!!!'
-        }
-    </script>
-    <hr>
-
+    }
+</script>
+<hr>
 
 
 </body>
