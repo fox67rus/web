@@ -221,5 +221,28 @@
         }
     </script>
 
+    <h2>Работа с элементами DOM (объектная модель документа)</h2>
+
+    <h3>Задание № 13. Работа с DOM</h3>
+    <p>Сделайте так, чтобы при нажатии на кнопку выводился текст с помощью
+        команды alert «Привет»</p>
+    <h4>Результат работы скрипта:</h4>
+    <button onclick="alert('Привет!')"> Нажми меня</button>
+    <hr>
+    <h3>Задание № 14.</h3>
+    <p>Сделайте так, чтобы при нажатии на кнопку она меняла текст в импуте:</p>
+    <h4>Результат работы скрипта:</h4>
+    <button onclick="buttonClick()"> Нажми меня</button>
+    <input type="text" id="input" value="???">
+    <script>
+        function buttonClick() {
+            var input = document.getElementById('input');
+            input.value = '!!!'
+        }
+    </script>
+    <hr>
+
+
+
 </body>
 </html>
