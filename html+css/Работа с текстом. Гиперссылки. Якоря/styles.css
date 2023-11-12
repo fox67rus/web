@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    background-color: #dad7f5;
+}
+
+hr{
+    border: none;
+    border-top: 3px double #A198F6;
+}
+p {padding-bottom: 10px;}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 5px;
+    background-color: #ffffff;
+}
+
+.link{
+    padding: 10px;
+    margin: 15px 0;
+    width: 200px;
+    border-radius: 5px;
+    display: block;
+    background: #A198F6;
+    color: #FFEB73;
+}
+.link:hover {
+    background: rgba(0,0,0,0);
+    color: #A198F6;
+    box-shadow: inset 0 0 0 3px #A198F6;
+}
+
+a, a:hover, a:active, a:focus {text-decoration: none;}
+
+.menu{
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100%;
+    text-align: center;
+}
+.top {
+    text-decoration: underline;
+    display: block;
+    background: #fabd8d;
+}
+
+.item {
+    /*display: inline-block;*/
+    white-space: nowrap;
+    padding: 5px;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    margin: 15px 0;
+}
+.item:hover {background: linear-gradient(#f5ae00, #f59500) #f5ae00;}
+.item:active {background: linear-gradient(#f59500, #f5ae00) #f59500;}
+
+.green {color: #85BD41;}
+.orange {color: #F38224;}
+.blue {color: #5187C5;}
+.red {color: #EC3628;}
+.nautilus {color: #61BDB3}
+.magenta {color: #54026E}
+
+
+
+
+
