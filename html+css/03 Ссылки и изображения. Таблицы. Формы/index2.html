@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ссылки и изображения. Таблицы. Формы. Задание 2</title>
+</head>
+<body>
+  <h1>Профиль</h1>
+  <form action="" method="post" enctype="multipart/form-data">
+    Ваш пол:
+    <label for="sex_male">
+      <input type="radio" name="sex" id="sex_male" value="male">
+      Мужской
+    </label>
+    <label for="sex_female">
+      <input type="radio" name="sex" id="sex_female" value="female" checked>
+      Женский
+      <br>
+    </label>
+
+    <label for="month">
+      Месяц и год рождения: <br>
+    </label>
+      <select name="month" id="month">
+        <option value="01">Январь</option>
+        <option value="02">Февраль</option>
+        <option value="03">Март</option>
+        <option value="04">Апрель</option>
+        <option value="05">Май</option>
+        <option value="06">Июнь</option>
+        <option value="07">Июль</option>
+        <option value="08">Август</option>
+        <option value="09">Сентябрь</option>
+        <option value="10">Октябрь</option>
+        <option value="11">Ноябрь</option>
+        <option value="12">Декабрь</option>
+      </select>
+
+    <select name="year" id="year">
+      <!--
+      option[value=198$]{198$}*9+option[value=1990]{1990}+option[value=199$]{199$}*9+option[value=2000]{2000}+option[value=200$]{200$}*5
+          -->
+      <option value="1981">1981</option>
+      <option value="1982">1982</option>
+      <option value="1983">1983</option>
+      <option value="1984">1984</option>
+      <option value="1985">1985</option>
+      <option value="1986">1986</option>
+      <option value="1987">1987</option>
+      <option value="1988">1988</option>
+      <option value="1989">1989</option>
+      <option value="1990">1990</option>
+      <option value="1991">1991</option>
+      <option value="1992">1992</option>
+      <option value="1993">1993</option>
+      <option value="1994">1994</option>
+      <option value="1995">1995</option>
+      <option value="1996">1996</option>
+      <option value="1997">1997</option>
+      <option value="1998">1998</option>
+      <option value="1999">1999</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2003">2003</option>
+      <option value="2004">2004</option>
+      <option value="2005">2005</option>
+    </select>
+    <br>
+    Знакомые технологии:
+    <br>
+    <select name="technology" id="tech" multiple size="4">
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Node.js">Node.js</option>
+      <option value="PHP">PHP</option>
+      <option value="React"></option>
+      <option value="Git"></option>
+    </select>
+    <br>
+    Фото:
+    <input type="file" name="photo_file" id="photo_file">
+    <br>
+    <input type="submit" value="Сохранить">
+  </form>
+
+</body>
+</html>
