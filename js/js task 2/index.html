@@ -261,6 +261,25 @@
 </script>
 <hr>
 
+<h3>Задание № 18.</h3>
+<p>Повторите поведение кнопок по нажатию на них (одна из них блокирует
+    инпут с помощью атрибута disabled, а другая разблокирует)</p>
+<h4>Результат работы скрипта:</h4>
+<button onclick="blockInput()"> Заблокировать</button>
+<button onclick="unblockInput()"> Разблокировать</button>
+<input type="text" id="inputText" value="Какой-то текст!">
+
+<script>
+    function blockInput() {
+        inputText = document.getElementById('inputText').disabled = true;
+    }
+    function unblockInput() {
+        document.getElementById('inputText').disabled = false;
+    }
+
+</script>
+<hr>
+
 
 </body>
 </html>
