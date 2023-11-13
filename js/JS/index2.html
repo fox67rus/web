@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS function</title>
+</head>
+<body>
+<h1>13.11.23</h1>
+<!--<p>Абзац 1</p>-->
+<!--<p>Абзац 2</p>-->
+<!--<p>Абзац 3</p>-->
+<!--<p>Абзац 4</p>-->
+
+
+<form action="" method="post" class="regform">
+    <p>
+        <input type="password" name="password" placeholder="Password">
+    </p>
+    <p><input type="password" name="passrepeat" placeholder="Repeat pass"></p>
+    <input type='button' value="Кнопка" onclick="valid()">
+</form>
+
+
+<script>
+    function valid() {
+        let form = document.querySelector(".regform");
+        if (form.password.value!= '' && form.passrepeat.value != '')
+        {
+            if (form.password.value == form.passrepeat.value)
+            {
+                console.log('Поля совпадают');
+                form.password.style.border = '';
+                form.passrepeat.style.border = '';
+            }
+            else
+            {
+                form.password.style.border = '2px solid red';
+                form.passrepeat.style.border = '2px solid red';
+            }
+        } else
+        {
+            form.password.style.border = '2px solid red';
+            form.passrepeat.style.border = '2px solid red';
+        }
+    }
+
+
+    // Работа с DOM (document object model
+    // 1.  Чтобы работаьь с элементом, его нужно выбрать *gold
+    // document.querySelector или document.querySelectorAll
+
+    // содержимое тега - innerHTML  и innerText
+
+    //
+    // document.querySelector('p').innerHTML = 'Hello';
+    //
+    // function summ(a, b) {
+    //     let c = a + b;
+    //     document.write(c);
+    // }
+    //
+    // summ(25, 23);
+
+</script>
+
+</body>
+</html>
