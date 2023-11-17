@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 17.11.23</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <script>
+        // ожидание загрузки документа
+       $(document).ready(function(){
+           // document.querySelector('p').innerHTML = 'Траляля';
+           // $('p').text('Новое название');
+
+           // //красиво скрыть текст с анимацией / показать
+           // $('p').hide(5000).show(2000);
+           //
+           // $('div.one').slideUp(5000).slideDown(2000);
+           //
+           // // добавить класс
+           // $('div').addClass('one');
+
+           $('p').animate({'padding': 30, 'width': 300}, 5000);
+
+
+
+       });
+
+    </script>
+    <div id="main">123</div>
+    <p class="one">Текст</p>
+    <p>Текст 2</p>
+    <p>Текст 3</p>
+    <p>Текст 4</p>
+
+
+    <style>
+        p{padding: 20px; width: 400px; background: gray;}
+        .one {
+            width:400px;
+            height: 200px;
+            background: #85BD41;
+        }
+    </style>
+
+</body>
+</html>
