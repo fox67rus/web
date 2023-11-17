@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS function</title>
+</head>
+<body>
+<h1>16.11.23</h1>
+<button onclick="score(this)">0</button>
+<script>
+    // // 1 способ
+    // let i = 0;
+    // function score(){
+    //     document.querySelector('button').innerHTML = i;
+    //     i++;
+    // }
+
+    // 2 способ
+    let i = 0;
+    function score(btn)
+    {
+        btn.innerHTML = i;
+        i++;
+    }
+
+</script>
+
+<input type="button" onclick="clickCounter()">
+
+<script>
+    let clicks = +localStorage.getItem('clicks');
+    const button = document.querySelector('input[type="button"]');
+    button.value = `Нажата ${clicks} раз`;
+    function clickCounter() {
+        localStorage.setItem('clicks', ++clicks);
+        button.value = `Нажата ${clicks} раз`;
+    }
+
+    localStorage.setItem('language', 'en');
+    document.write(localStorage.getItem('language'))
+</script>
+
+<br><br>
+<input type="text" id="one" placeholder="Введите число!">
+<input type="text" id="two" disabled placeholder="Здесь появится результат">
+<button onclick="squareToInput()"> Нажми на меня!</button>
+<script>
+    function squareToInput() {
+        let number1 = document.querySelector('#one').value;
+
+        if (Number(number1)) {
+            document.querySelector('#two').value = (number1 ** 2);
+        } else {
+            document.querySelector('#two').value = '← введите число!!'
+        }
+    }
+</script>
+
+
+
+<style>
+    button{
+        width: 400px;
+    }
+</style>
+</body>
+</html>

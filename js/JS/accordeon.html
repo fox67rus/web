@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<ul>-->
+<!--  <li class="open">-->
+<!--    <a href="" class="accordion" onclick="accordion('#div1')">Элемент 1</a>-->
+<!--    <div id="div1" style="display: none"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro ullam ut? Accusamus autem cum id laborum nam quo quod reiciendis rem repellat repellendus rerum sequi soluta velit, vero voluptatibus!</p></div>-->
+<!--  </li>-->
+<!--  <li class="open">-->
+<!--    <a href="" class="accordion" onclick="accordion('#div2')">Элемент 2</a>-->
+<!--    <div id="div2" style="display: none"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid architecto, aspernatur debitis dignissimos eligendi et ex illum in inventore labore magnam officiis pariatur, praesentium quo sint suscipit velit voluptas?</p></div>-->
+<!--  </li>-->
+<!--  <li class="open">-->
+<!--    <a href="" class="accordion" onclick="accordion('#div3')">Элемент 3</a>-->
+<!--    <div id="div3" style="display: none"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid aspernatur debitis explicabo, fugit hic illo labore odio officia officiis recusandae, sint ullam vero. Dolorum ex facilis illum nemo totam.</p></div>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!--<script>-->
+<!--  function accordion(vibor){-->
+<!--    console.log(document.querySelector(vibor));-->
+<!--    let block = document.querySelector(vibor);-->
+<!--    if (block.style.display == 'block') {-->
+<!--      block.style.display = 'none'-->
+<!--    } else {-->
+<!--      block.style.display = 'block'-->
+<!--    }-->
+
+<!--  }-->
+<!--</script>-->
+
+
+
+<ul class="uk-accordion">
+  <li class="uk-open">
+    <a class="uk-accordion-title" href="#" onclick="accordon('#div1');">Элемент 1</a>
+    <div id="div1" style="display: none;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </li>
+  <li>
+    <a class="uk-accordion-title" href="#" onclick="accordon('#div2');">Элемент 2</a>
+    <div id="div2" style="display: none;">
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+    </div>
+  </li>
+  <li>
+    <a class="uk-accordion-title" href="#" onclick="accordon('#div3');">Элемент 3</a>
+    <div id="div3" style="display: none;">
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+    </div>
+  </li>
+</ul>
+
+
+<script>
+
+  function accordon(vibor)
+  {
+    let block = document.querySelector(vibor);
+    if (block.style.display == "block")
+    {
+      block.style.display = "none";
+    }
+    else
+    {
+      block.style.display = "block";
+    }
+
+  }
+
+</script>
+</body>
+</html>
