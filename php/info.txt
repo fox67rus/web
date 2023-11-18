@@ -1,0 +1,20 @@
+http://o99596cu.beget.tech/hellophp/reg.php? fullName=Ivanov&login=admin&email=test%40qiott.com&password=123&confirmPassword=123&agree=on
+
+
+$_GET = [
+"fullName" => "Ivanov",
+"login" => "admin",
+]
+
+
+Array
+(
+    [fullName] => Ivanov
+    [login] => admin
+    [email] => test@qiott.com
+    [password] => 123
+    [confirmPassword] => 123
+    [agree] => on
+)
+
+echo $_GET["fullName"];
