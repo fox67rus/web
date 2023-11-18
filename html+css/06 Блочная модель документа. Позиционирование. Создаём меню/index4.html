@@ -47,6 +47,7 @@ body {
 }
 
 .main-menu > li {
+    position: relative;
 }
 
 /* Подменю */
@@ -56,6 +57,16 @@ body {
     padding: 0;
     list-style: none;
     background: #fcf8e3;
+    position: absolute;
+    top: 5px;
+    left: 170px;
+    z-index: 10;
+    width: 150px;
+    display: none;
+}
+
+.main-menu > li:hover .sub-menu {
+    display: block;
 }
 </style>	
 </html>
