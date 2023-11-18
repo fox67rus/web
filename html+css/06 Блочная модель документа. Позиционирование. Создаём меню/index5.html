@@ -34,9 +34,10 @@ body {
     border: 1px solid #e5e5e5;
 }
 
-.main-menu li {
+.main-menu > li {
     display: inline-block;
     margin-right: -4px;
+    position: relative;
 }
 
 .main-menu a {
@@ -56,6 +57,19 @@ body {
     padding: 0;
     list-style: none;
     background: #fcf8e3;
+    position: absolute;
+    left: 1px;
+    width: 150px;
+    display: none;
 }
+.main-menu .sub-menu a{
+    border: 1px solid #e5e5e5;
+    margin-bottom: -1px;
+}
+
+.main-menu > li:hover .sub-menu {
+    display: block;
+}
+
 </style>	
 </html>
