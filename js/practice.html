@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)">Наведи на меня!!!</div>
+<script>
+  function mOver(obj)
+  {
+    obj.innerHTML = "Реакция на курсор";
+    obj.style.background = "#254bb5";
+  }
+  function mOut(obj)
+  {
+    obj.innerHTML = "Наведи на меня!!!";
+    obj.style.background = "#35b525";
+  }
+</script>
+<style>
+  .box {
+    width: 200px;
+    height: 100px;
+    background: #35b525;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+</style>
+</body>
+</html>
