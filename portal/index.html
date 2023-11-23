@@ -12,61 +12,65 @@
 
 <body>
 <div class="container">
-
     <header>
-        <a href="/" class="logo-link">
-            <div class="logo">
-                <img src="img/logo.png" alt="Логотип">
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Логотип">
+                </div>
+            </a>
+<!--            <div class="site-title">-->
+<!--                <h1>Сделаем лучше вместе!</h1>-->
+<!--            </div>-->
+            <div class="auth-buttons">
+                <button id="loginButton">Авторизация</button>
+                <button id="registrationButton" class="register-button">Регистрация</button>
             </div>
-        </a>
-        <div class="site-title">
-            <h1>Сделаем лучше вместе!</h1>
-        </div>
-        <div class="auth-buttons">
-            <button id="loginButton">Авторизация</button>
-            <button id="registrationButton" class="register-button">Регистрация</button>
-        </div>
     </header>
 
     <div class="welcome-section">
         <h1>Городской портал</h1>
         <h2>По приёму заявок на устранение проблем в городе</h2>
-        <p>Добро пожаловать на городской портал! Мы заботимся о благополучии нашего города и приглашаем вас присоединиться к улучшению жизни в нашем сообществе. Сообщите нам о проблемах, с которыми вы сталкиваетесь, и вместе мы сделаем наш город лучше!</p>
-        <button>Сообщить о проблеме</button>
+        <p>Добро пожаловать на городской портал! Мы заботимся о благополучии нашего города и приглашаем вас
+            присоединиться к улучшению жизни в нашем сообществе. Сообщите нам о проблемах, с которыми вы сталкиваетесь,
+            и вместе мы сделаем наш город лучше!</p>
     </div>
 
     <section class="problem-section">
         <div class="problem-header">
-            <h2>Актуальные проблемы</h2>
-            <p>Решено проблем: <span id="solved-counter">0</span></p>
+            <h2>Решенные проблемы</h2>
+            <p>Решено проблем: <span id="solved-counter">345</span></p>
         </div>
 
         <div class="solved-problems">
             <div class="problem-card">
-                <img src="problem1.jpg" alt="Фото проблемы 1">
+                <img src="img/problem1-after.jpg" alt="Фото проблемы 1">
                 <div class="problem-info">
-                    <h3>Проблема 1</h3>
-                    <p class="category">Категория: Общественный транспорт</p>
+                    <h3>Сломаны почтовые ящики</h3>
+                    <p class="category">Категория: Мой дом</p>
                     <p class="date">Дата: 01.01.2023</p>
-                    <p>Описание проблемы 1...</p>
+                    <p>В подъезде дома №5 сломано крепление почтового ящика, что вызывает
+                        неудобства для жителей данного дома и может привести к потере почтовых отправлений</p>
                 </div>
             </div>
             <div class="problem-card">
-                <img src="problem1.jpg" alt="Фото проблемы 1">
+                <img src="img/problem2-after.jpg" alt="Фото проблемы 1">
                 <div class="problem-info">
-                    <h3>Проблема 1</h3>
-                    <p class="category">Категория: Общественный транспорт</p>
+                    <h3>Не горят фонари</h3>
+                    <p class="category">Категория: Дворовая территория</p>
                     <p class="date">Дата: 01.01.2023</p>
-                    <p>Описание проблемы 1...</p>
+                    <p>В переулке между улицами Пушкина и Лермонтова возникла серьезная проблема – уличные фонари
+                        перестали работать. Эта ситуация создает темные и небезопасные условия для пешеходов и жителей
+                        района.</p>
                 </div>
             </div>
             <div class="problem-card">
-                <img src="problem1.jpg" alt="Фото проблемы 1">
+                <img src="img/problem3-after.jpg" alt="Фото проблемы 1">
                 <div class="problem-info">
                     <h3>Проблема 1</h3>
-                    <p class="category">Категория: Общественный транспорт</p>
+                    <p class="category">Категория: Освещение в жилых домах</p>
                     <p class="date">Дата: 01.01.2023</p>
-                    <p>Описание проблемы 1...</p>
+                    <p>В подъезде дома №17 по улице Советская обнаружена проблема с освещением. Светильники в подъезде
+                        перестали работать, создавая неудобства и угрозу безопасности для жильцов</p>
                 </div>
             </div>
         </div>
@@ -82,7 +86,8 @@
             <a href="privacy-policy.html">Политика конфиденциальности</a>
         </div>
     </footer>
-</div> <!-- Закрытие контейнера -->
+
+</div>  <!-- Закрытие контейнера -->
 
     <!-- Модальное окно для регистрации -->
     <div id="registrationModal" class="modal">
