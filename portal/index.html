@@ -1,17 +1,139 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Городской портал</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-    <header>
-        <div class="container">
 
+<body>
+<div class="container">
+
+    <header>
+        <a href="/" class="logo-link">
+            <div class="logo">
+                <img src="img/logo.png" alt="Логотип">
+            </div>
+        </a>
+        <div class="site-title">
+            <h1>Сделаем лучше вместе!</h1>
+        </div>
+        <div class="auth-buttons">
+            <button id="loginButton">Авторизация</button>
+            <button id="registrationButton" class="register-button">Регистрация</button>
         </div>
     </header>
 
+    <div class="welcome-section">
+        <h1>Городской портал</h1>
+        <h2>По приёму заявок на устранение проблем в городе</h2>
+        <p>Добро пожаловать на городской портал! Мы заботимся о благополучии нашего города и приглашаем вас присоединиться к улучшению жизни в нашем сообществе. Сообщите нам о проблемах, с которыми вы сталкиваетесь, и вместе мы сделаем наш город лучше!</p>
+        <button>Сообщить о проблеме</button>
+    </div>
+
+    <section class="problem-section">
+        <div class="problem-header">
+            <h2>Актуальные проблемы</h2>
+            <p>Решено проблем: <span id="solved-counter">0</span></p>
+        </div>
+
+        <div class="solved-problems">
+            <div class="problem-card">
+                <img src="problem1.jpg" alt="Фото проблемы 1">
+                <div class="problem-info">
+                    <h3>Проблема 1</h3>
+                    <p class="category">Категория: Общественный транспорт</p>
+                    <p class="date">Дата: 01.01.2023</p>
+                    <p>Описание проблемы 1...</p>
+                </div>
+            </div>
+            <div class="problem-card">
+                <img src="problem1.jpg" alt="Фото проблемы 1">
+                <div class="problem-info">
+                    <h3>Проблема 1</h3>
+                    <p class="category">Категория: Общественный транспорт</p>
+                    <p class="date">Дата: 01.01.2023</p>
+                    <p>Описание проблемы 1...</p>
+                </div>
+            </div>
+            <div class="problem-card">
+                <img src="problem1.jpg" alt="Фото проблемы 1">
+                <div class="problem-info">
+                    <h3>Проблема 1</h3>
+                    <p class="category">Категория: Общественный транспорт</p>
+                    <p class="date">Дата: 01.01.2023</p>
+                    <p>Описание проблемы 1...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="index.html" class="logo-link">
+            <div class="footer-logo">
+                <img src="footer-logo.png" alt="Логотип футера">
+            </div>
+        </a>
+        <div class="privacy-policy">
+            <a href="privacy-policy.html">Политика конфиденциальности</a>
+        </div>
+    </footer>
+</div> <!-- Закрытие контейнера -->
+
+    <!-- Модальное окно для регистрации -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRegistrationModal">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registrationForm">
+                <label for="fullName">ФИО:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirmPassword">Повторите пароль:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <label>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    Я согласен(а) с обработкой персональных данных
+                </label>
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для авторизации -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <h2>Авторизация</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Логин:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Пароль:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+<script src="js/scripts.js"></script>
+
 </body>
+
 </html>
