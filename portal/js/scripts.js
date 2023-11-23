@@ -1,38 +1,3 @@
-// // Открытие модального окна
-// function openRegModal() {
-//     document.getElementById('registrationModal').style.display = 'flex';
-// }
-//
-// // Закрытие модального окна
-// function closeRegModal() {
-//     document.getElementById('registrationModal').style.display = 'none';
-// }
-//
-// // Обработка формы регистрации (вы можете добавить свою логику обработки)
-// document.getElementById('registrationForm').addEventListener('submit', function (event) {
-//     event.preventDefault(); // Предотвращение отправки формы
-//     // Ваш код обработки формы
-//     closeRegModal(); // Закрытие модального окна после успешной регистрации (замените на свой код)
-// });
-//
-// // Открытие модального окна для авторизации
-// function openLoginModal() {
-//     document.getElementById('loginModal').style.display = 'flex';
-// }
-//
-// // Закрытие модального окна для авторизации
-// function closeLoginModal() {
-//     document.getElementById('loginModal').style.display = 'none';
-// }
-//
-// // Обработка формы авторизации (вы можете добавить свою логику обработки)
-// document.getElementById('loginForm').addEventListener('submit', function (event) {
-//     event.preventDefault(); // Предотвращение отправки формы
-//     // Ваш код обработки формы
-//     closeLoginModal(); // Закрытие модального окна после успешной авторизации (замените на свой код)
-// });
-
-
 // валидация формы
 $(document).ready(function() {
 // Получаем элементы модальных окон
