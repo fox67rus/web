@@ -36,24 +36,18 @@ body {
 }
 
 header {
-    /*background-color: #4CAF50;*/
     color: white;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid var(--green-medium, #97B829);
 }
-
-/*.logo img {*/
-/*    max-height: 50px;*/
-/*}*/
 
 @media only screen and (max-width: 620px) {
     .logo img {
         max-height: 55px; /* Новая максимальная высота логотипа при узком экране */
     }
 }
-
 
 .site-title h1 {
     margin: 0;
@@ -74,28 +68,34 @@ header {
 }
 
 .auth-buttons .register-button {
-    background-color: #4CAF50;
-    color: white;
+    background: var(--green-medium, #97B829);
+    color: var(--grey-super-light, #F4F2F3);
 }
 
 .auth-buttons button:hover, .auth-buttons .register-button:hover {
-    background-color: #45a049;
+    /*background-color: #45a049;*/
+    background: var(--grey-super-light, #F4F2F3);
+    color: var(--green-medium, #97B829);
 }
 
 .welcome-section {
-    background-color: #eeeeee70;
-    padding: 20px;
+    padding: 0 20px;
     text-align: center;
 }
 
 .welcome-section h1 {
     margin-bottom: 10px;
+    font-size: 50px;
+    background: var(--green-medium, #97B829);
+    color: white;
+    padding: 5px;
 }
 
 .welcome-section h2 {
     margin-top: 0;
     margin-bottom: 20px;
     color: var(--nautilus-dark);
+    font-size: 23px;
 }
 
 .welcome-section p {
@@ -128,12 +128,18 @@ header {
 }
 
 .problem-card {
-    background-color: #f8f8f8;
-    padding: 16px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    /*background-color: #f8f8f8;*/
+    /*padding: 16px;*/
+    /*margin-bottom: 10px;*/
+    /*border-radius: 5px;*/
     /*flex: 0 1 calc(33.33% - 50px); !* Распределение карточек в ряде с отступами *!*/
     width: 340px;
+
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
 }
 
 .problem-card img {
@@ -148,8 +154,22 @@ header {
 }
 
 .category, .date {
-    margin: 5px 0;
-    font-style: italic;
+    position: absolute;
+    color: var(--grey-super-light, #F4F2F3);
+    padding: 5px 10px; /* Поля вокруг текста метки */
+    font-size: 14px;
+}
+
+.date {
+    bottom: 160px;
+    right: 0;
+    background: var(--nautilus-medium, #719A9C);
+}
+
+.category{
+    top: 10px;
+    left: 0;
+    background: var(--green-medium, #97B829);
 }
 
 #solved-counter {
@@ -157,25 +177,29 @@ header {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--grey-super-light);
+    color: var(--grey-super-dark);
     padding: 10px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
     width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box; /* Учитывать границы и отступы внутри элемента */
 }
 
+.footer-logo {
+    width: 400px;
+}
+
 .footer-logo img {
-    max-height: 30px;
+    max-height: 60px;
 }
 
 .privacy-policy a {
-    color: white;
+    color: var(--grey-super-dark);
     text-decoration: none;
 }
 
@@ -198,13 +222,15 @@ footer {
 }
 
 .modal-content {
-    background-color: #f8f8f8; /* Используем цвет из основной страницы */
+    background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;
     max-width: 400px;
-    margin: auto;
+    margin: 20px auto;
     position: relative;
 }
+
+
 
 #registrationForm {
     display: flex;
@@ -248,14 +274,6 @@ footer {
 }
 
 /* Стили для модального окна и формы авторизации */
-#loginModal .modal-content {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    margin: auto;
-    position: relative;
-}
 
 #loginForm {
     display: flex;
