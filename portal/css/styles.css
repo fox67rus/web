@@ -177,12 +177,11 @@ header {
 }
 
 footer {
-    background-color: var(--grey-super-light);
     color: var(--grey-super-dark);
     padding: 10px;
     text-align: center;
-    /*position: fixed;*/
-    /*bottom: 0;*/
+    position: fixed;
+    bottom: 0;
     width: 1200px;
     display: flex;
     justify-content: flex-start;
@@ -250,14 +249,18 @@ footer {
 }
 
 #registrationForm button {
-    background-color: #4CAF50;
-    color: white;
+    background: var(--green-medium, #97B829);
+    color: var(--grey-super-light, #F4F2F3);
+
     border: none;
     cursor: pointer;
 }
 
 #registrationForm button:hover {
-    background-color: #45a049;
+    background: var(--grey-super-light, #F4F2F3);
+    color: var(--green-medium, #97B829);
+    border: 1px solid var(--green-medium, #97B829);
+
 }
 
 #registrationForm label input {
@@ -321,5 +324,5 @@ footer {
 .error-message {
     color: #ff0000;
     font-size: 14px;
-    margin-top: 5px;
+    margin: 10px 0;
 }
