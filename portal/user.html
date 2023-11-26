@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>Городской портал</title>
+    <title>Кабинет пользователя</title>
 </head>
 
 <body>
@@ -19,29 +19,98 @@
             </div>
         </a>
         <div class="auth-buttons">
-            <button id="loginButton">Авторизация</button>
-            <button id="registrationButton" class="register-button">Регистрация</button>
+            <p>Привет, [Имя пользователя]!</p>
+            <button id="logoutButton">Выйти</button>
         </div>
     </header>
 
     <div class="welcome-section">
-        <h1>Личный кабинет пользователя</h1>
-        <h2>Привет, Александр Исаевич Солженицын!</h2>
-        <p></p>
+        <h1>Кабинет пользователя</h1>
+        <button id="reportProblemButton">Сообщить о проблеме</button>
     </div>
 
+    <section id="reportProblemSection" class="hidden">
+        <h2>Сообщить о проблеме</h2>
+        <form id="reportProblemForm">
+            <label for="problemTitle">Название:</label>
+            <input type="text" id="problemTitle" name="problemTitle" required>
+
+            <label for="problemDescription">Описание:</label>
+            <textarea id="problemDescription" name="problemDescription" required></textarea>
+
+            <label for="problemCategory">Категория:</label>
+            <select id="problemCategory" name="problemCategory" required>
+                <option value="Дворовая территория">Дворовая территория</option>
+                <option value="Освещение">Освещение</option>
+                <option value="Другое">Другое</option>
+            </select>
+
+            <label for="problemPhoto">Добавить фото:</label>
+            <input type="file" id="problemPhoto" name="problemPhoto">
+
+            <button type="submit">Сообщить о проблеме</button>
+        </form>
+    </section>
+
+    <section class="user-requests-section">
+        <h2>Мои заявки</h2>
+        <div class="user-requests">
+            <!-- Пример заявки 1 -->
+            <div class="user-request">
+                <img src="img/problem1-after.jpg" alt="Фото проблемы 1">
+                <div class="request-info">
+                    <h3>Сломаны почтовые ящики</h3>
+                    <p class="lk_category">Мой дом</p>
+                    <p class="lk_date">01.01.2023</p>
+                    <p>В подъезде дома №5 сломано крепление почтового ящика...</p>
+                    <button class="delete-button" data-id="1">Удалить заявку</button>
+                    <span class="status new">Новая</span>
+                </div>
+            </div>
+            <!-- Пример заявки 2 -->
+            <div class="user-request">
+                <img src="img/problem2-after.jpg" alt="Фото проблемы 2">
+                <div class="request-info">
+                    <h3>Не горят фонари</h3>
+                    <p class="lk_category">Дворовая территория</p>
+                    <p class="lk_date">02.01.2023</p>
+                    <p>В переулке между улицами Пушкина и Лермонтова возникла...</p>
+                    <button class="delete-button" data-id="2">Удалить заявку</button>
+                    <span class="status resolved">Решена</span>
+                </div>
+            </div>
+            <!-- Пример заявки 3 -->
+            <div class="user-request">
+                <img src="img/problem3-after.jpg" alt="Фото проблемы 3">
+                <div class="request-info">
+                    <h3>Темно в подъезде</h3>
+                    <p class="lk_category">Освещение в жилых домах</p>
+                    <p class="lk_date">03.01.2023</p>
+                    <p>В подъезде дома №17 по улице Советская обнаружена...</p>
+                    <button class="delete-button" data-id="3">Удалить заявку</button>
+                    <span class="status rejected">Отклонена</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <a href="index.html" class="logo-link">
             <div class="footer-logo">
-                <img src="footer-logo.png" alt="Логотип футера">
+                <img src="img/logo.svg" alt="Логотип">
             </div>
         </a>
         <div class="privacy-policy">
-            <a href="privacy-policy.html">Политика конфиденциальности</a>
+            <p>Copyright © Городской портал, 2023.
+                <span><a href="privacy-policy.html">Политика конфиденциальности</a></span>
+            </p>
         </div>
     </footer>
-
 </div>
+
+
+<script src="js/user.js"></script>
+
 </body>
+
 </html>
