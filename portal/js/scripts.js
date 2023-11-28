@@ -1,6 +1,17 @@
 // валидация формы
 $(document).ready(function() {
-// Получаем элементы модальных окон
+    // смена фото проблемы при наведении мыши
+    $('.hover-image').hover(
+        function() {
+            $(this).attr('src', $(this).data('hover'));
+        },
+        function() {
+            $(this).attr('src', $(this).data('original'));
+        }
+    );
+
+
+    // Получаем элементы модальных окон
     var loginModal = $('#loginModal');
     var registrationModal = $('#registrationModal');
 

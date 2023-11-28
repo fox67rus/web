@@ -154,12 +154,22 @@ header {
     border-radius: 8px;
 }
 
-.problem-card img {
+.hover-image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-image {
     max-width: 100%;
     margin-bottom: 8px;
     border-radius: 10px 40px;
-    /*background: url(../img/problem1-after.jpg), lightgray 50% / cover no-repeat;*/
+    transition: transform 0.5s ease-in-out;
 }
+
+.hover-image:hover {
+    transform: scale(1.05); /* Увеличиваем размер на 5% при наведении */
+}
+
 
 .problem-info {
     text-align: left;
@@ -212,10 +222,13 @@ footer {
 .privacy-policy a {
     color: var(--grey-super-dark);
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .privacy-policy a:hover {
     text-decoration: underline;
+    transform: scale(1.02);
 }
 
 
