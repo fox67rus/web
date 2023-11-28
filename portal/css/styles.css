@@ -31,21 +31,19 @@
         transform: translateX(-2px);
     }
 }
-
 body {
     font-family: 'Ubuntu', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*background-image: url("../img/background.jpg");*/
     background: var(--with-texture);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    height: 100vh;
     background-image: url("../img/tree.png");
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 header {
@@ -202,23 +200,24 @@ footer {
     color: var(--grey-super-dark);
     padding: 10px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 1200px;
+    box-sizing: border-box; /* Учитывать границы и отступы внутри элемента */
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    box-sizing: border-box; /* Учитывать границы и отступы внутри элемента */
 }
 
 .footer-logo {
-    width: 400px;
+    /*margin-right: 128px;*/
+    margin-right: auto; /* для выравнивания логотипа влево */
 }
 
 .footer-logo img {
     max-height: 60px;
 }
 
+.privacy-policy {
+    margin-left: auto; /* для выравнивания текста и ссылки вправо */
+}
 .privacy-policy a {
     color: var(--grey-super-dark);
     text-decoration: none;
