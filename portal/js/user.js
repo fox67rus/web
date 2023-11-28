@@ -15,14 +15,7 @@ $(document).ready(function () {
         }, 700);
     });
 
-    // Добавляем кнопку с иконкой в правый верхний угол формы
-    var closeButton = $('#closeFormButton');
-    closeButton.appendTo('#reportProblemSection');
 
-    // Обработчик события для кнопки сворачивания формы
-    closeButton.click(function() {
-        $('#reportProblemSection').slideUp('slow');
-    });
 
 
 });

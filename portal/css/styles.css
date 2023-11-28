@@ -15,6 +15,8 @@
 
     --green-medium: #97B829;
     --yellow-medium: #EACF38;
+    --red-medium: #C56625;
+
 }
 
 @keyframes wiggle {
@@ -139,11 +141,6 @@ header {
 }
 
 .problem-card {
-    /*background-color: #f8f8f8;*/
-    /*padding: 16px;*/
-    /*margin-bottom: 10px;*/
-    /*border-radius: 5px;*/
-    /*flex: 0 1 calc(33.33% - 50px); !* Распределение карточек в ряде с отступами *!*/
     width: 340px;
     position: relative;
     background-color: #f8f8f8;
@@ -167,7 +164,6 @@ header {
 .hover-image:hover {
     transform: scale(1.05); /* Увеличиваем размер на 5% при наведении */
 }
-
 
 .problem-info {
     text-align: left;
@@ -207,7 +203,6 @@ footer {
 }
 
 .footer-logo {
-    /*margin-right: 128px;*/
     margin-right: auto; /* для выравнивания логотипа влево */
 }
 
@@ -364,6 +359,13 @@ footer {
     animation: wiggle 0.3s ease-in-out infinite;
 }
 
+.hello {
+    font-size: 27px;
+}
+.hello span {
+    color: var(--nautilus-dark, #426365);
+    font-weight: bold;
+}
 #reportProblemSection {
     padding: 20px;
     background: rgba(145, 185, 186, 0.5);
@@ -486,19 +488,17 @@ footer {
     display: flex;
     margin: 20px 0;
     padding: 10px;
+    min-width: 455px;
     border: 1px solid var(--grey-light);
     border-radius: 8px;
     background: var(--grey-super-light);
+    position: relative;
 }
 
 .user-requests .user-request img {
     max-width: 180px;
     margin-right: 20px;
     border-radius: 8px;
-}
-
-.user-requests .request-info {
-    flex: 1;
 }
 
 .user-requests h3,
@@ -519,22 +519,24 @@ footer {
 
 .user-requests .status {
     padding: 5px 10px;
-    border-radius: 4px;
-    margin-top: 10px;
-    display: inline-block;
+    border-radius: 4px 0 0 4px;
+    /*display: inline-block;*/
+    position: absolute;
+    top: 10px;
+    right: 0;
 }
 
-.user-requests .status.new {
-    background: var(--nautilus-light);
-    color: var(--nautilus-dark);
+.status.new {
+    background: var(--yellow-medium);
+    color: var(--grey-super-dark);
 }
 
-.user-requests .status.resolved {
+.status.resolved {
     background: var(--green-medium);
     color: var(--grey-super-light);
 }
 
-.user-requests .status.rejected {
-    background: #ff6666; /* Красный цвет для отклоненных заявок */
-    color: white;
+.status.rejected {
+    background: var(--red-medium);
+    color: var(--grey-super-light);
 }
