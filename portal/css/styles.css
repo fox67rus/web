@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
 :root {
     /*--with-texture: url("../img/background.jpg");*/
     --with-texture: url("../img/background.jpg"), repeat, rgba(255, 255, 255, 0.5);
@@ -33,6 +34,7 @@
         transform: translateX(-2px);
     }
 }
+
 body {
     font-family: 'Ubuntu', Arial, sans-serif;
     margin: 0;
@@ -45,6 +47,7 @@ body {
     margin: 0 auto;
     background-image: url("../img/tree.png");
     background-repeat: no-repeat;
+    background-size: 100%;
     min-height: 100vh;
 }
 
@@ -182,7 +185,7 @@ header {
     background: var(--nautilus-medium, #719A9C);
 }
 
-.category{
+.category {
     top: 10px;
     left: 0;
     background: var(--green-medium, #97B829);
@@ -213,6 +216,7 @@ footer {
 .privacy-policy {
     margin-left: auto; /* для выравнивания текста и ссылки вправо */
 }
+
 .privacy-policy a {
     color: var(--grey-super-dark);
     text-decoration: none;
@@ -295,7 +299,7 @@ footer {
 }
 
 /* Стили для модального окна и формы авторизации */
-#loginModal h2{
+#loginModal h2 {
     color: var(--grey-super-dark, #454545);
     font-size: 30px;
 }
@@ -317,6 +321,7 @@ footer {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 .loginButtons {
     display: flex;
     justify-content: space-between;
@@ -337,11 +342,11 @@ footer {
 }
 
 .error {
-    border: 1px solid #ff0000;
+    border: 1px solid var(--red-medium, #C56625);
 }
 
 .error-message {
-    color: #ff0000;
+    color: var(--red-medium, #C56625);
     font-size: 14px;
     margin: 10px 0;
 }
@@ -350,10 +355,11 @@ footer {
 стили для личного кабинета
 *********************************************/
 
-#logoutButton{
+#logoutButton {
     background: var(--nautilus-medium, #719A9C);
     color: var(--grey-super-light, #F4F2F3);
 }
+
 #logoutButton:hover {
     background: var(--nautilus-light, #719A9C);
     animation: wiggle 0.3s ease-in-out infinite;
@@ -362,13 +368,15 @@ footer {
 .hello {
     font-size: 27px;
 }
+
 .hello span {
     color: var(--nautilus-dark, #426365);
     font-weight: bold;
 }
+
 #reportProblemSection {
     padding: 20px;
-    background: rgba(145, 185, 186, 0.5);
+    background: rgba(113, 154, 156, 0.8);
     display: none;
     position: relative;
     max-width: 610px;
@@ -378,6 +386,7 @@ footer {
 
 #reportProblemSection h2 {
     text-align: center;
+    color: var(--grey-super-light);
 }
 
 #reportProblemButton {
@@ -408,11 +417,22 @@ footer {
     height: 100px;
 }
 
-#reportProblemForm select,
-#reportProblemForm input[type="file"],
+#problemCategory,
+#problemDescription,
+#problemTitle {
+    padding: 3px 6px;
+    color: var(--grey-super-dark, #454545);
+    box-sizing: border-box;
+    width: 100%; /* Занимаем 100% ширины доступной области */
+    margin-bottom: 10px; /* Добавляем отступ между полями */
+}
+
+#reportProblemForm input[type="file"] {
+    margin: 10px 0;
+}
+
 #reportProblemForm button {
-    margin-top: 10px;
-    padding: 8px;
+    padding: 3px 6px;
     border-radius: 5px;
 }
 
@@ -425,27 +445,26 @@ footer {
 
 #reportProblemForm label {
     margin-bottom: 5px; /* Добавляем отступ между меткой и полем ввода */
-    color: var(--grey-super-dark, #454545);
+    color: var(--grey-super-light, #f4f2f3);
     font-weight: bold;
     text-transform: uppercase;
     display: block;
 }
 
-#reportProblemForm input,
-#reportProblemForm textarea,
-#reportProblemForm button {
-    width: 100%; /* Занимаем 100% ширины доступной области */
-    margin-bottom: 10px; /* Добавляем отступ между полями */
+#reportProblemForm > label > span {
+    display: block;
+    text-transform: none;
+    font-weight: normal;
 }
 
 #problemTitle {
-    color: var(--grey-super-dark, #454545);
     height: 20px;
+
 }
 
-#problemTitle:focus-visible {
-    border-color: var(--nautilus-dark);
-}
+/*#problemTitle:focus-visible {*/
+/*    border-color: var(--nautilus-dark);*/
+/*}*/
 
 #reportProblemForm button[type="submit"] {
     display: block;
@@ -458,7 +477,6 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
-
 
 @keyframes colorChange {
     from {
@@ -480,9 +498,41 @@ footer {
     margin-top: 20px;
 }
 
-.user-requests h2 {
+.user-requests-section  h2 {
     color: var(--grey-super-dark);
 }
+/****** блок фильтрации ***********/
+.filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    color: var(--grey-super-dark);
+}
+
+#statusFilter {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--grey-light);
+    margin-right: 10px;
+}
+
+#applyFilter {
+    background-color: var(--nautilus-medium);
+    color: var(--grey-super-light);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#applyFilter:hover {
+    background-color: var(--nautilus-dark);
+}
+/*****************/
 
 .user-requests .user-request {
     display: flex;

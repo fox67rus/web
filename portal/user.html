@@ -45,25 +45,38 @@
                 <option value="Другое">Другое</option>
             </select>
 
-            <label for="problemPhoto">Добавить фото:</label>
-            <p>Добавьте фото, демонстрирующее проблему в формате jpg, jpeg, png, bmp. Максимальный размер 10 Мб</p>
+            <label for="problemPhoto">
+                Добавить фото:
+                <span>Изображение в формате jpg, jpeg, png, bmp. Максимальный размер 10 Мб</span>
+            </label>
+
             <input type="file" id="problemPhoto" name="problemPhoto">
 
             <button type="submit">Сообщить о проблеме</button>
         </form>
     </section>
 
-                    <section class="user-requests-section">
-                        <h2>Мои заявки</h2>
-                        <div class="user-requests">
-                            <div class="user-request">
-                                <img src="img/problems/problem1-after.jpg" alt="Фото проблемы 1">
-                                <div class="request-info">
-                                    <h3>Сломаны почтовые ящики</h3>
-                                    <span class="status new">Новая</span>
-                                    <p class="lk_category">Мой дом</p>
-                                    <p class="lk_date">01.01.2023</p>
-                                    <p>В подъезде дома №5 сломано крепление почтового ящика...</p>
+    <section class="user-requests-section">
+        <h2>Мои заявки</h2>
+        <div class="filter-section">
+            <label for="statusFilter">Фильтр по статусу:</label>
+            <select id="statusFilter">
+                <option value="all">Все заявки</option>
+                <option value="new">Новые</option>
+                <option value="resolved">Решенные</option>
+                <option value="rejected">Отклоненные</option>
+            </select>
+            <button id="applyFilter">Применить</button>
+        </div>
+        <div class="user-requests">
+            <div class="user-request">
+                <img src="img/problems/problem1-after.jpg" alt="Фото проблемы 1">
+                <div class="request-info">
+                    <h3>Сломаны почтовые ящики</h3>
+                    <span class="status new">Новая</span>
+                    <p class="lk_category">Мой дом</p>
+                    <p class="lk_date">01.01.2023</p>
+                    <p>В подъезде дома №5 сломано крепление почтового ящика...</p>
                     <button class="delete-button" data-id="1">Удалить заявку</button>
 
                 </div>

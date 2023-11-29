@@ -15,7 +15,33 @@ $(document).ready(function () {
         }, 700);
     });
 
+// Обработчик для кнопки "Применить" фильтра по статусу
+    $('#applyFilter').on('click', function() {
+        var selectedStatus = $('#statusFilter').val();
 
+        try {
+            // Ваш код для применения фильтра (например, скрытие/показ определенных заявок)
+            if (selectedStatus === 'new') {
+                // Показать только новые заявки
+                $('.user-request').hide();
+                $('.status.new').closest('.user-request').show();
+            } else if (selectedStatus === 'resolved') {
+                // Показать только решенные заявки
+                $('.user-request').hide();
+                $('.status.resolved').closest('.user-request').show();
+            } else if (selectedStatus === 'rejected') {
+                // Показать только отклоненные заявки
+                $('.user-request').hide();
+                $('.status.rejected').closest('.user-request').show();
+            } else {
+                // Показать все заявки
+                $('.user-request').show();
+            }
+        } catch (error) {
+            console.error('Произошла ошибка:', error);
+        }
+
+    });
 
 
 });
