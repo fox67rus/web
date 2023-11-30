@@ -134,6 +134,17 @@ header {
     color: var(--grey-super-dark);
 }
 
+#solved-counter {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--nautilus-dark, #426365);
+    transition: color 0.3s ease; /* Анимация изменения цвета */
+}
+
+#solved-counter:hover {
+    color: var(--nautilus-light); /* Измененный цвет при наведении */
+}
+
 .problem-card h3 {
     margin-top: 0;
 }
@@ -190,10 +201,6 @@ header {
     top: 10px;
     left: 0;
     background: var(--green-medium, #97B829);
-}
-
-#solved-counter {
-    font-weight: bold;
 }
 
 footer {
