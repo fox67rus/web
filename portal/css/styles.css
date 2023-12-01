@@ -88,7 +88,6 @@ header {
 }
 
 .auth-buttons button:hover, .auth-buttons .register-button:hover {
-    /*background-color: #45a049;*/
     background: var(--grey-super-light, #F4F2F3);
     color: var(--green-medium, #97B829);
 }
@@ -99,12 +98,11 @@ header {
 }
 
 .welcome-section h1 {
-    margin-bottom: 10px;
     font-size: 50px;
-    color: white;
+    color: var(--grey-super-light, #F4F2F3);
     padding: 5px;
     background: rgba(151, 184, 41, 0.7);
-    min-width: 358px;
+    min-width: 480px;
 }
 
 .welcome-section h2 {
