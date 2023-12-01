@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>Городской портал</title>
+    <title>Кабинет администратора</title>
 </head>
 
 <body>
@@ -19,30 +19,168 @@
             </div>
         </a>
         <div class="auth-buttons">
-            <button id="loginButton">Авторизация</button>
-            <button id="registrationButton" class="register-button">Регистрация</button>
+            <button id="logoutButton">Выйти</button>
         </div>
     </header>
 
-    <div class="welcome-section">
-        <h1>Личный кабинет администратора</h1>
-        <h2>Привет, Вильгельмина Александровна
-            Колобкова-Крупчатникова!</h2>
-        <p></p>
-    </div>
+    <section class="welcome-section">
+        <h1>Кабинет администратора</h1>
+        <p class="hello">Привет, <span>Император Николай Александрович Романов!</span></p>
+    </section>
 
+    <!-- Раздел "Управление категориями" -->
+    <section class="category-section">
+        <h2>
+            Управление категориями
+            <button id="toggleCategorySection" class="toggle-button">▼</button>
+
+        </h2>
+
+        <div id="categorySectionContent">
+            <!-- Форма добавления новой категории -->
+            <form id="addCategoryForm">
+                <label for="categoryName">Название категории:</label>
+                <input type="text" id="categoryName" name="categoryName" required>
+                <button id="addCategoryButton" type="submit">Добавить</button>
+            </form>
+            <!-- Форма удаления категории -->
+            <form id="deleteCategoryForm">
+                <label for="categoryToDelete">Выберите категорию для удаления:</label>
+                <select id="categoryToDelete" name="categoryToDelete" required>
+                    <option value="category1">Дворовая территория</option>
+                    <option value="category2">Освещение</option>
+                    <option value="category3">Другое</option>
+                </select>
+                <button type="button" id="deleteCategoryButton">Удалить</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Раздел "Управление заявками" -->
+    <section class="admin-requests-section">
+        <h2>Управление заявками</h2>
+        <!-- блок для счетчика новых заявок -->
+        <div id="newRequestsCounter" class="new-requests-counter">
+            <span class="counter-label">Новых заявок:</span>
+            <span class="counter-value"> 2</span>
+        </div>
+
+        <div class="filter-section">
+            <label for="statusFilter">Фильтр по статусу:</label>
+            <select id="statusFilter">
+                <option value="all">Все заявки</option>
+                <option value="new">Новые</option>
+                <option value="resolved">Решенные</option>
+                <option value="rejected">Отклоненные</option>
+            </select>
+        </div>
+        <div class="user-requests">
+            <div class="user-request">
+                <img src="img/problems/problem1.jpg" alt="Фото проблемы 1">
+                <div class="request-info">
+                    <h3>Сломаны почтовые ящики</h3>
+                    <span class="status new">Новая</span>
+                    <div class="additional-info">
+                        <p class="lk_category">Мой дом</p>
+                        <p class="lk_date">01.01.2023</p>
+                    </div>
+                    <p>В подъезде дома №5 сломано крепление почтового ящика, что вызывает неудобства для жителей данного
+                        дома и может привести к потере почтовых отправлений</p>
+                    <button class="delete-button" data-id="1" title="Удалить заявку"></button>
+                </div>
+            </div>
+            <div class="user-request">
+                <img src="img/problems/problem2.jpg" alt="Фото проблемы 2">
+                <div class="request-info">
+                    <h3>Не горят фонари</h3>
+                    <div class="additional-info">
+                        <p class="lk_category">Дворовая территория</p>
+                        <p class="lk_date">02.01.2023</p>
+                    </div>
+                    <p>В переулке между улицами Пушкина и Лермонтова возникла серьезная проблема – уличные фонари
+                        перестали работать. Эта ситуация создает темные и небезопасные условия для пешеходов и жителей района.</p>
+                    <button class="delete-button" data-id="2" title="Удалить заявку"></button>
+                    <span class="status resolved">Решена</span>
+                </div>
+            </div>
+            <div class="user-request">
+                <img src="img/problems/problem3.jpg" alt="Фото проблемы 3">
+                <div class="request-info">
+                    <h3>Темно в подъезде</h3>
+                    <div class="additional-info">
+                        <p class="lk_category">Освещение в жилых домах</p>
+                        <p class="lk_date">03.01.2023</p>
+                    </div>
+                    <p>В подъезде дома №17 по улице Советская обнаружена проблема с освещением. Светильники в подъезде
+                        перестали работать, создавая неудобства и угрозу безопасности для жильцов</p>
+                    <button class="delete-button" data-id="3" title="Удалить заявку"></button>
+                    <span class="status rejected">Отклонена</span>
+                </div>
+            </div>
+            <div class="user-request">
+                <img src="img/problems/problem1.jpg" alt="Фото проблемы 1">
+                <div class="request-info">
+                    <h3>Сломаны почтовые ящики</h3>
+                    <span class="status new">Новая</span>
+                    <div class="additional-info">
+                        <p class="lk_category">Мой дом</p>
+                        <p class="lk_date">01.01.2023</p>
+                    </div>
+                    <p>В подъезде дома №5 сломано крепление почтового ящика, что вызывает неудобства для жителей данного
+                        дома и может привести к потере почтовых отправлений</p>
+                    <button class="delete-button" data-id="1" title="Удалить заявку"></button>
+                </div>
+            </div>
+            <div class="user-request">
+                <img src="img/problems/problem2.jpg" alt="Фото проблемы 2">
+                <div class="request-info">
+                    <h3>Не горят фонари</h3>
+                    <div class="additional-info">
+                        <p class="lk_category">Дворовая территория</p>
+                        <p class="lk_date">02.01.2023</p>
+                    </div>
+                    <p>В переулке между улицами Пушкина и Лермонтова возникла серьезная проблема – уличные фонари
+                        перестали работать. Эта ситуация создает темные и небезопасные условия для пешеходов и жителей района.</p>
+                    <button class="delete-button" data-id="2" title="Удалить заявку"></button>
+                    <span class="status resolved">Решена</span>
+                </div>
+            </div>
+            <div class="user-request">
+                <img src="img/problems/problem3.jpg" alt="Фото проблемы 3">
+                <div class="request-info">
+                    <h3>Темно в подъезде</h3>
+                    <div class="additional-info">
+                        <p class="lk_category">Освещение в жилых домах</p>
+                        <p class="lk_date">03.01.2023</p>
+                    </div>
+                    <p>В подъезде дома №17 по улице Советская обнаружена проблема с освещением. Светильники в подъезде
+                        перестали работать, создавая неудобства и угрозу безопасности для жильцов</p>
+                    <button class="delete-button" data-id="3" title="Удалить заявку"></button>
+                    <span class="status rejected">Отклонена</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="scrollTopButton" class="scroll-top-button">↑</div>
 
     <footer>
         <a href="index.html" class="logo-link">
             <div class="footer-logo">
-                <img src="footer-logo.png" alt="Логотип футера">
+                <img src="img/logo.svg" alt="Логотип">
             </div>
         </a>
         <div class="privacy-policy">
-            <a href="privacy-policy.html">Политика конфиденциальности</a>
+            <p>Copyright © Городской портал, 2023.
+                <span><a href="privacy-policy.html">Политика конфиденциальности</a></span>
+            </p>
         </div>
     </footer>
-
 </div>
+
+<script src="js/user.js"></script>
+<script src="js/admin.js"></script>
+
 </body>
 </html>

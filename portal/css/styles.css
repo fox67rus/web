@@ -499,11 +499,11 @@ footer {
     border: 1px solid var(--yellow-medium, #EACF38);
 }
 
-.user-requests-section {
+.requests-section {
     margin-top: 20px;
 }
 
-.user-requests-section h2 {
+.requests-section h2 {
     color: var(--grey-super-dark);
 }
 
@@ -554,11 +554,11 @@ footer {
     margin: 0 55px 0 0;
 }
 
-.user-requests .user-request .request-info {
+.user-request .request-info {
     flex: 1;
 }
 
-.user-requests .user-request .additional-info {
+.user-request .additional-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -583,7 +583,7 @@ footer {
     transform: translateY(-50%);
 }
 
-.user-requests .user-request .lk_date {
+.user-request .lk_date {
     position: absolute;
     top: 10px;
     right: 128px;
@@ -604,7 +604,6 @@ footer {
     border: none;
     cursor: pointer;
 }
-
 
 .user-requests .status {
     padding: 5px 10px;
