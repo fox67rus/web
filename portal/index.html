@@ -116,55 +116,55 @@
 </div>  <!-- Закрытие контейнера -->
 
 <!-- TODO: перенести регистрацию в отдельный файл -->
-    <!-- Модальное окно для регистрации -->
-    <div id="registrationModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeRegistrationModal">&times;</span>
-            <h2>Регистрация</h2>
-            <form id="registrationForm">
-                <label for="fullName">ФИО:</label>
-                <input type="text" id="fullName" name="fullName" required>
+<!-- Модальное окно для регистрации -->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeRegistrationModal">&times;</span>
+        <h2>Регистрация</h2>
+        <form id="registrationForm">
+            <label for="fullName">ФИО:</label>
+            <input type="text" id="fullName" name="fullName" required>
 
-                <label for="username">Логин:</label>
-                <input type="text" id="username" name="username" required>
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
 
-                <label for="confirmPassword">Повторите пароль:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <label for="confirmPassword">Повторите пароль:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-                <button type="submit">Зарегистрироваться</button>
-                <label>
-                    <input type="checkbox" id="agree" name="agree" checked required>
-                    Нажимая на кнопку, вы соглашаетесь с условиями <a href="privacy-policy.html">обработки персональных данных</a>
-                </label>
-            </form>
-        </div>
+            <button type="submit">Зарегистрироваться</button>
+            <label>
+                <input type="checkbox" id="agree" name="agree" checked required>
+                Нажимая на кнопку, вы соглашаетесь с условиями <a href="privacy-policy.html">обработки персональных данных</a>
+            </label>
+        </form>
     </div>
+</div>
 
-    <!-- Модальное окно для авторизации -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeLoginModal">&times;</span>
-            <h2>Авторизация</h2>
-            <form id="loginForm">
-                <label for="loginUsername">Логин:</label>
-                <input type="text" id="loginUsername" name="loginUsername" placeholder="Email" required>
+<!-- Модальное окно для авторизации -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeLoginModal">&times;</span>
+        <h2>Авторизация</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Логин:</label>
+            <input type="text" id="loginUsername" name="loginUsername" placeholder="Email" required>
 
-                <label for="loginPassword">Пароль:</label>
-                <input type="password" id="loginPassword" name="loginPassword" placeholder="Пароль" required>
-                <div class="loginButtons">
-                    <button type="submit">Войти</button>
-                    <span class="repairPassword"><a href="#">Восстановить пароль</a></span>
-                </div>
+            <label for="loginPassword">Пароль:</label>
+            <input type="password" id="loginPassword" name="loginPassword" placeholder="Пароль" required>
+            <div class="loginButtons">
+                <button type="submit">Войти</button>
+                <span class="repairPassword"><a href="#">Восстановить пароль</a></span>
+            </div>
 
-            </form>
-        </div>
+        </form>
     </div>
+</div>
 
 <script src="js/scripts.js"></script>
 

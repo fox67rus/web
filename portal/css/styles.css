@@ -568,6 +568,24 @@ footer {
     width: 80px;
 }
 
+.status.new-status {
+    background: var(--yellow-medium);
+    color: var(--grey-super-dark);
+
+}
+
+.status.resolved-status {
+    background: var(--green-medium);
+    color: var(--grey-super-light);
+}
+
+.status.rejected-status {
+    background: var(--red-medium);
+    color: var(--grey-super-light);
+}
+
+
+
 .user-request .lk_date {
     color: var(--grey-super-dark);
 }
@@ -584,22 +602,6 @@ footer {
 .delete-button {
     background: url('../img/delete.svg') no-repeat center center;
 }
-
-.status.new-status {
-    background: var(--yellow-medium);
-    color: var(--grey-super-dark);
-}
-
-.status.resolved-status {
-    background: var(--green-medium);
-    color: var(--grey-super-light);
-}
-
-.status.rejected-status {
-    background: var(--red-medium);
-    color: var(--grey-super-light);
-}
-
 
 .lk_category {
     position: relative;
