@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/user.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Кабинет пользователя</title>
 </head>
@@ -115,6 +116,20 @@
             </p>
         </div>
     </footer>
+</div>
+
+<!-- Модальное окно для удаления заявки -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content delete-modal-content">
+        <span class="close" id="closeDeleteModal">&times;</span>
+        <img src="img/exclamation.svg" alt="Удаление заявки">
+        <h2>Вы уверены, что хотите удалить заявку?</h2>
+        <p>Отменить это действие невозможно!!!</p>
+        <div class="buttons-container">
+            <button class="modal-button cancel" id="cancelDelete">Отмена</button>
+            <button class="modal-button delete-issue" id="confirmDelete">Да, удалить</button>
+        </div>
+    </div>
 </div>
 
 <script src="js/user.js"></script>

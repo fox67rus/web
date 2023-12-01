@@ -43,4 +43,22 @@ $(document).ready(function () {
     });
 
 
+    // Открытие модального окна при нажатии на кнопку "Удалить заявку"
+    $('.delete-button').on('click', function () {
+        $('#deleteModal').css('display', 'block');
+    });
+
+    // Закрытие модального окна при нажатии на кнопку "Отмена" или крестик
+    $('#cancelDelete, #closeDeleteModal').on('click', function () {
+        $('#deleteModal').css('display', 'none');
+    });
+
+    // Закрытие модального окна при клике вне его области
+    $(window).on('click', function (event) {
+        if (event.target.id === 'deleteModal') {
+            $('#deleteModal').css('display', 'none');
+        }
+    });
+
+
 });
