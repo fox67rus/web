@@ -120,6 +120,15 @@
     color: var(--grey-super-light, #f4f2f3);
 }
 
+.resolved-button {
+    background: url('../img/resolved.svg') no-repeat center center;
+}
+
+.rejected-button {
+    background: url('../img/rejected.svg') no-repeat center center;
+}
+
+
 .scroll-top-button {
     display: none;
     position: fixed;
@@ -137,5 +146,6 @@
 .scroll-top-button:hover {
     background-color: var(--nautilus-medium);
 }
+
 
 

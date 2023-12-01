@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
 
 :root {
-    /*--with-texture: url("../img/background.jpg");*/
     --with-texture: url("../img/background.jpg"), repeat, rgba(255, 255, 255, 0.5);
     --green-with-texture: url("../img/background.jpg"), rgba(151, 184, 41, 0.8);
 
@@ -116,7 +115,7 @@ header {
 }
 
 .welcome-section p {
-    margin-bottom: 20px;
+    margin-bottom: 75px;
 }
 
 .problem-section {
@@ -468,7 +467,6 @@ footer {
 
 #problemTitle {
     height: 20px;
-
 }
 
 #reportProblemForm button[type="submit"] {
@@ -528,16 +526,15 @@ footer {
 
 /*****************/
 
-
 .user-request {
     display: flex;
+    align-items: center;
     margin: 20px 0;
     padding: 10px;
     min-width: 455px;
     border: 1px solid var(--grey-light);
     border-radius: 8px;
     background: var(--grey-super-light);
-    position: relative;
 }
 
 .user-request img {
@@ -546,28 +543,70 @@ footer {
     border-radius: 8px;
 }
 
-.user-requests h3 {
-    margin: 0;
-}
-
-.request-info > p {
-    margin: 0 55px 0 0;
-}
-
 .user-request .request-info {
     flex: 1;
 }
 
-.user-request .additional-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.request-info {
+    flex-grow: 1;
 }
+
+.header-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-section h3 {
+    margin-right: auto; /* Заголовок занимает оставшееся пространство слева */
+}
+
+
+.user-requests .status {
+    padding: 5px 10px;
+    border-radius: 4px 0 0 4px;
+    margin-right: -10px;
+    margin-left: 20px;
+    width: 80px;
+}
+
+.user-request .lk_date {
+    color: var(--grey-super-dark);
+}
+
+.ico-button {
+    background-size: contain;
+    width: 30px; /* Ширина и высота кнопки */
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.delete-button {
+    background: url('../img/delete.svg') no-repeat center center;
+}
+
+.status.new-status {
+    background: var(--yellow-medium);
+    color: var(--grey-super-dark);
+}
+
+.status.resolved-status {
+    background: var(--green-medium);
+    color: var(--grey-super-light);
+}
+
+.status.rejected-status {
+    background: var(--red-medium);
+    color: var(--grey-super-light);
+}
+
 
 .lk_category {
     position: relative;
     padding-left: 30px; /* отступ слева для размещения иконки */
-    margin: 5px 0 0 0;
+    margin: 5px 0;
 }
 
 .lk_category::before {
@@ -583,47 +622,6 @@ footer {
     transform: translateY(-50%);
 }
 
-.user-request .lk_date {
-    position: absolute;
-    top: 10px;
-    right: 128px;
-    padding: 7px 0;
-    color: var(--grey-super-dark);
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.delete-button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: url('../img/delete.svg') no-repeat center center;
-    background-size: contain;
-    width: 20px; /* Ширина и высота кнопки */
-    height: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.user-requests .status {
-    padding: 5px 10px;
-    border-radius: 4px 0 0 4px;
-    position: absolute;
-    top: 10px;
-    right: 0;
-}
-
-.status.new {
-    background: var(--yellow-medium);
-    color: var(--grey-super-dark);
-}
-
-.status.resolved {
-    background: var(--green-medium);
-    color: var(--grey-super-light);
-}
-
-.status.rejected {
-    background: var(--red-medium);
-    color: var(--grey-super-light);
+.request-info > p {
+    margin: 0 55px 0 0;
 }

@@ -24,15 +24,15 @@ $(document).ready(function () {
             if (selectedStatus === 'new') {
                 // Показать только новые заявки
                 $('.user-request').hide();
-                $('.status.new').closest('.user-request').show();
+                $('.status.new-status').closest('.user-request').show();
             } else if (selectedStatus === 'resolved') {
                 // Показать только решенные заявки
                 $('.user-request').hide();
-                $('.status.resolved').closest('.user-request').show();
+                $('.status.resolved-status').closest('.user-request').show();
             } else if (selectedStatus === 'rejected') {
                 // Показать только отклоненные заявки
                 $('.user-request').hide();
-                $('.status.rejected').closest('.user-request').show();
+                $('.status.rejected-status').closest('.user-request').show();
             } else {
                 // Показать все заявки
                 $('.user-request').show();
