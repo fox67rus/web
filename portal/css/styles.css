@@ -503,9 +503,10 @@ footer {
     margin-top: 20px;
 }
 
-.user-requests-section  h2 {
+.user-requests-section h2 {
     color: var(--grey-super-dark);
 }
+
 /****** блок фильтрации ***********/
 .filter-section {
     margin-bottom: 20px;
@@ -525,18 +526,6 @@ footer {
     margin-right: 10px;
 }
 
-#applyFilter {
-    background-color: var(--nautilus-medium);
-    color: var(--grey-super-light);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#applyFilter:hover {
-    background-color: var(--nautilus-dark);
-}
 /*****************/
 
 
@@ -557,9 +546,12 @@ footer {
     border-radius: 8px;
 }
 
-.user-requests h3,
-.user-requests p {
+.user-requests h3 {
     margin: 0;
+}
+
+.request-info > p {
+    margin: 0 55px 0 0;
 }
 
 .user-requests .user-request .request-info {
@@ -571,17 +563,20 @@ footer {
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
 .lk_category {
     position: relative;
-    padding-left: 30px; /* Задайте нужный отступ слева для размещения иконки */
+    padding-left: 30px; /* отступ слева для размещения иконки */
+    margin: 5px 0 0 0;
 }
+
 .lk_category::before {
     content: ""; /* Пустой контент */
     background-image: url("../img/category.svg");
     background-size: contain; /* Размер изображения по содержимому */
     background-repeat: no-repeat;
-    width: 20px; /* Задайте нужную ширину иконки */
-    height: 20px; /* Задайте нужную высоту иконки */
+    width: 20px; /* ширину иконки */
+    height: 20px; /* высоту иконки */
     position: absolute;
     left: 0;
     top: 50%;

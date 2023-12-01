@@ -15,9 +15,9 @@ $(document).ready(function () {
         }, 700);
     });
 
-// Обработчик для кнопки "Применить" фильтра по статусу
-    $('#applyFilter').on('click', function() {
-        var selectedStatus = $('#statusFilter').val();
+// Используйте событие change для отслеживания изменений в выпадающем списке
+    $('#statusFilter').on('change', function() {
+        var selectedStatus = $(this).val();
 
         try {
             // Ваш код для применения фильтра (например, скрытие/показ определенных заявок)
@@ -40,7 +40,6 @@ $(document).ready(function () {
         } catch (error) {
             console.error('Произошла ошибка:', error);
         }
-
     });
 
 
