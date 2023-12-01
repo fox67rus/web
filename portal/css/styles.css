@@ -591,16 +591,18 @@ footer {
 }
 
 .ico-button {
-    background-size: contain;
+    /*background-size: contain;*/
+    background-size: cover;
+    background-position: center center; /* Выравнивание изображения по центру кнопки */
+    border: none; /* Убираем границу кнопки, так как у нас есть фоновое изображение */
+    cursor: pointer;
     width: 30px; /* Ширина и высота кнопки */
     height: 30px;
-    border: none;
-    cursor: pointer;
     margin-left: 20px;
 }
 
 .delete-button {
-    background: url('../img/delete.svg') no-repeat center center;
+    background-image: url('../img/delete.svg')
 }
 
 .lk_category {
