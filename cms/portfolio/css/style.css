@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg: #FDFBF9;
+    --duo: #FFDAA5;
+    --fill: #FFDAA5;
+    --gray-light: #D9D9D9;
+    --gray-medium: #919795;
+    --line: #FF5708;
+    --text: #47280B;
+    --subtext: #FF5708;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+html {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    font-family: 'Bitter', serif;
+    color: var(--text);
+    border-top: 5px solid var(--subtext);
+    background: var(--bg);
+    min-height: calc(100vh - 40px);
+    position: relative;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 134px;
+    position: relative;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: url('../img/logo.svg');
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(45deg);
+}
+
+.write-me {
+    padding-left: 45px;
+    height: 35px;
+    background: url('../img/write.svg') no-repeat;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 9999;
+}
+
+.container {
+    min-height: calc(100vh - 40px);
+    position: relative;
+    background: var(--bg);
+    overflow: hidden;
+    transition: background 1s cubic-bezier(.165, .84, .44, 1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /*margin-bottom: 33.33vh;*/
+    animation: reveal .8s cubic-bezier(.215, .61, .355, 1) .25s backwards;
+    animation-delay: 0.25s;
+    background: url(../img/hexagon.svg) no-repeat top center;
+    /*background-size: contain;*/
+}
+
+.text-block h1 {
+    display: inline-block;
+    color: var(--text);
+    font-size: 8rem;
+    line-height: 1.1;
+    animation: reveal .8s cubic-bezier(.215, .61, .355, 1) .25s backwards;
+    scroll-margin-top: -40px;
+}
+
+.main .t-primary {
+    max-width: 500px;
+    margin-top: 30px;
+    font-size: 2.4rem;
+    line-height: 1.65;
+    animation-delay: .75s;
+}
+
+.dot {
+    color: var(--subtext);
+}
+
+b {
+    font-weight: 700;
+}
+
+.image-block {
+    width: 600px;
+    height: 460px;
+    background: url("../img/ninja-developer.svg") no-repeat;
+}
+
+.more {
+    height: 277px;
+    width: 94px;
+    text-transform: uppercase;
+    text-align: center;
+    background: url("../img/line.svg") no-repeat center;
+}
+
+.my-works-header h2 {
+    font-size: 6.5rem;
+    line-height: 1.125;
+    scroll-margin-top: -40px;
+    font-weight: bold;
+}
+
+hr {
+    width: 70px;
+    display: block;
+    border: 0;
+    border-top: 3px solid var(--line);
+    margin: 31px 0;
+    padding: 0;
+}
+
+.my-works-header p {
+    font-size: 2.4rem;
+}
+
+.project-content h3 {
+    font-size: 3.8rem;
+    line-height: 1.125;
+}
+
+.description {
+    font-size: 1.8rem;
+}
+
