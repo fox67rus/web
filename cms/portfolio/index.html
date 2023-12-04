@@ -6,101 +6,105 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <div class="nav">
-        <div class="logo"></div>
-        <div class="menu">
-<!--            Обо мне-->
-<!--            Портфолио-->
-<!--            Блог-->
-<!--            Контакты-->
-            <div class="write-me">Написать</div>
+    <header>
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="menu">
+    <!--            Обо мне-->
+    <!--            Портфолио-->
+    <!--            Блог-->
+    <!--            Контакты-->
+                <div class="write-me">Написать</div>
+            </div>
         </div>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <div class="content">
+                <div class="text-block hidden">
+                    <h1>Привет, меня <br>зовут <b>Елена</b><span class="dot">.</span></h1>
+                    <p class="t-primary">Я - <b>начинающий веб-разработчик</b> из России.</p>
+                </div>
+                <div class="image-block"></div>
+            </div>
+            <div class="more">Подробнее</div>
+        </section>
+
+        <section id="recent-projects" class="recent-projects">
+            <div class="my-works-header hidden">
+                <h2>Мои последние работы<span class="dot">.</span></h2>
+                <hr>
+                <p>Здесь вы сможете ознакомиться с моими последними проектами.</p>
+            </div>
+
+            <div class="recent-projects">
+
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img src="img/projects/project_001.png" alt="Превью">
+                    </div>
+                    <div class="project-content">
+                        <h3>Городской портал</h3>
+                        <div class="description">
+                            <p>Проект городского портала для приема заявок от жителей города.</p>
+                            <p><b>Функционал:</b> регистрация, авторизация, счётчик решенных заявок, отправка заявки от
+                                пользователя, управление своими заявками, управление заявками администратором
+                                (отклонение, выполнение), управление категориями заявок.</p>
+                            <p><b>Используемые технологии:</b> figma, html, css, java script, jQuery, ajax, php, mysql</p>
+                        </div>
+                        <a href="http://o99596cu.beget.tech/portal/" target="_blank">
+                            <div class="button-link">Перейти на сайт</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img src="img/projects/project_002.png" alt="Превью">
+                    </div>
+                    <div class="project-content">
+                        <h3>Путешествие по Европе</h3>
+                        <div class="description">
+                            <p>Проект для выбора туров.</p>
+                            <p><b>Функционал:</b> Лэндинг. Одностраничный сайт с информацией о турах.</p>
+                            <p><b>Используемые технологии:</b> figma, html, css</p>
+                        </div>
+                        <a href="http://o99596cu.beget.tech/euro/" target="_blank">
+                            <div class="button-link">Перейти на сайт</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img src="img/projects/project_001.png" alt="Превью" width="400px">
+                    </div>
+                    <div class="project-content">
+                        <h3>Городской портал</h3>
+                        <div class="description">
+                            <p>Проект городского портала для приема заявок от жителей города.</p>
+                            <p><b>Функционал:</b> регистрация, авторизация, счётчик решенных заявок, отправка заявки от
+                                пользователя, управление своими заявками, управление заявками администратором
+                                (отклонение, выполнение), управление категориями заявок.</p>
+                            <p><b>Используемые технологии:</b> figma, html, css, java script, jQuery, ajax, php, mysql</p>
+                        </div>
+                        <a href="http://o99596cu.beget.tech/portal/" target="_blank">
+                            <div class="button-link">Перейти на сайт</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
-</header>
 
-<div class="container">
-    <section class="main">
-        <div class="content">
-            <div class="text-block hidden">
-                <h1>Привет, меня <br>зовут <b>Елена</b><span class="dot">.</span></h1>
-                <p class="t-primary">Я - <b>начинающий веб-разработчик</b> из России.</p>
-            </div>
-            <div class="image-block"></div>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2023 Елена Павлова. Все права защищены.</p>
         </div>
-        <div class="more">Подробнее</div>
-    </section>
-
-    <section id="recent-projects" class="recent-projects">
-        <div class="my-works-header hidden">
-            <h2>Мои последние работы<span class="dot">.</span></h2>
-            <hr>
-            <p>Здесь вы сможете ознакомиться с моими последними проектами.</p>
-        </div>
-
-        <div class="recent-projects">
-
-            <div class="project-card">
-                <div class="project-preview">
-                    <img src="img/projects/project_001.png" alt="Превью">
-                </div>
-                <div class="project-content">
-                    <h3>Городской портал</h3>
-                    <div class="description">
-                        <p>Проект городского портала для приема заявок от жителей города.</p>
-                        <p><b>Функционал:</b> регистрация, авторизация, счётчик решенных заявок, отправка заявки от
-                            пользователя, управление своими заявками, управление заявками администратором
-                            (отклонение, выполнение), управление категориями заявок.</p>
-                        <p><b>Используемые технологии:</b> figma, html, css, java script, jQuery, ajax, php, mysql</p>
-                    </div>
-                    <a href="http://o99596cu.beget.tech/portal/" target="_blank">
-                        <div class="button-link">Перейти на сайт</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-preview">
-                    <img src="img/projects/project_002.png" alt="Превью">
-                </div>
-                <div class="project-content">
-                    <h3>Путешествие по Европе</h3>
-                    <div class="description">
-                        <p>Проект для выбора туров.</p>
-                        <p><b>Функционал:</b> Лэндинг. Одностраничный сайт с информацией о турах.</p>
-                        <p><b>Используемые технологии:</b> figma, html, css</p>
-                    </div>
-                    <a href="http://o99596cu.beget.tech/euro/" target="_blank">
-                        <div class="button-link">Перейти на сайт</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-preview">
-                    <img src="img/projects/project_001.png" alt="Превью" width="400px">
-                </div>
-                <div class="project-content">
-                    <h3>Городской портал</h3>
-                    <div class="description">
-                        <p>Проект городского портала для приема заявок от жителей города.</p>
-                        <p><b>Функционал:</b> регистрация, авторизация, счётчик решенных заявок, отправка заявки от
-                            пользователя, управление своими заявками, управление заявками администратором
-                            (отклонение, выполнение), управление категориями заявок.</p>
-                        <p><b>Используемые технологии:</b> figma, html, css, java script, jQuery, ajax, php, mysql</p>
-                    </div>
-                    <a href="http://o99596cu.beget.tech/portal/" target="_blank">
-                        <div class="button-link">Перейти на сайт</div>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-</div>
-
-<footer></footer>
-<script src="js/main.js" type="text/javascript"></script>
+    </footer>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
