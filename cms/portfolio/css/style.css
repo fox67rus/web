@@ -25,6 +25,12 @@ a {
     color: inherit;
 }
 
+::selection {
+    background: var(--line);
+    color: var(--bg);
+    text-shadow: none
+}
+
 html {
     font-size: 10px;
     -webkit-font-smoothing: antialiased
@@ -192,21 +198,11 @@ b {
     border-bottom: none;
 }
 
-/*.project-card:not(:last-child):after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: -1px;*/
-/*    height: 1px;*/
-/*    border: none;*/
-/*    background: var(--text);*/
-/*    opacity: .275;*/
-/*}*/
-
-.project-preview {
+.project-preview img{
     width: 400px;
-    max-height: 300px;
+    max-height: 320px;
+    object-fit: contain;
+    cursor: help;
 }
 
 .project-content {
@@ -246,10 +242,3 @@ b {
     color: var(--text);
 }
 
-.project-card hr {
-    display: block;
-    border: 0;
-    border-top: 1px solid var(--grey-light, #D9D9D9);
-    margin: 31px 0;
-    padding: 0;
-}
