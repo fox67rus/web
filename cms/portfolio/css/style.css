@@ -20,6 +20,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: baseline
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 html {
     font-size: 10px;
     -webkit-font-smoothing: antialiased
@@ -47,11 +52,11 @@ body {
     width: 60px;
     height: 60px;
     background: url('../img/logo.svg');
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .logo:hover {
-    transform: rotate(45deg);
+    transform: rotate(360deg);
 }
 
 .write-me {
@@ -140,6 +145,21 @@ b {
     background: url("../img/line.svg") no-repeat center;
 }
 
+.my-works-header {
+    padding-bottom: 130px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .my-works-header h2 {
     font-size: 6.5rem;
     line-height: 1.125;
@@ -147,7 +167,7 @@ b {
     font-weight: bold;
 }
 
-hr {
+.my-works-header hr {
     width: 70px;
     display: block;
     border: 0;
@@ -160,12 +180,76 @@ hr {
     font-size: 2.4rem;
 }
 
+.project-card {
+    display: flex;
+    border-bottom: 1px solid var(--gray-light);
+}
+.project-card + .project-card {
+    margin-top: 60px;
+}
+
+.project-card:last-child {
+    border-bottom: none;
+}
+
+/*.project-card:not(:last-child):after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: -1px;*/
+/*    height: 1px;*/
+/*    border: none;*/
+/*    background: var(--text);*/
+/*    opacity: .275;*/
+/*}*/
+
+.project-preview {
+    width: 400px;
+    max-height: 300px;
+}
+
+.project-content {
+    padding-left: 90px;
+}
+
 .project-content h3 {
     font-size: 3.8rem;
     line-height: 1.125;
+    font-weight: bold;
+    padding-bottom: 13px;
 }
 
 .description {
     font-size: 1.8rem;
+    margin-top: 10px;
+    line-height: 1.65;
 }
 
+.button-link {
+    width: 253px;
+    border-radius: 10px;
+    border: 3px solid var(--line, #FF5708);
+    color: var(--line, #FF5708);
+    padding: 16px 0;
+    margin: 65px 0;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+    background-color: var(--line, #FF5708);
+    color: var(--text);
+}
+
+.project-card hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--grey-light, #D9D9D9);
+    margin: 31px 0;
+    padding: 0;
+}
