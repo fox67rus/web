@@ -17,6 +17,8 @@ $(document).ready(function () {
         }
     });
 
+
+    // кнопка для возврата наверх страницы
     const scrollTopButton = $('#scrollTopButton');
 
     // Показываем или скрываем кнопку при прокрутке страницы
@@ -35,5 +37,24 @@ $(document).ready(function () {
         }, 500);
         return false;
     });
+
+
+    // Открытие модального окна при нажатии на кнопку "Удалить заявку"
+    $('#deleteCategoryButton').on('click', function () {
+        $('#deleteModal').css('display', 'block');
+    });
+
+    // Закрытие модального окна при нажатии на кнопку "Отмена" или крестик
+    $('#cancelDelete, #closeDeleteModal').on('click', function () {
+        $('#deleteModal').css('display', 'none');
+    });
+
+    // Закрытие модального окна при клике вне его области
+    $(window).on('click', function (event) {
+        if (event.target.id === 'deleteModal') {
+            $('#deleteModal').css('display', 'none');
+        }
+    });
+
 
 });

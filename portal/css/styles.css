@@ -627,3 +627,57 @@ footer {
 .request-info > p {
     margin: 0 55px 0 0;
 }
+
+
+/* Стили для модального окна */
+.modal-content {
+    text-align: center;
+}
+
+.modal-content img {
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;
+}
+
+.modal-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    color: var(--red-medium, #C56625);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: var(--nautilus-medium);
+    color: #fff;
+    border: none;
+}
+
+.delete-issue {
+    background-color: var(--red-medium);
+    color: #fff;
+    border: none;
+}
+
+/* Дополнительные стили для закрытия модального окна */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
